@@ -1,0 +1,6 @@
+爬去应用方式：垂直爬取。
+爬取目的：爬取网络中的技术文章，按图索引，建立起自己的文档数据库。
+存储方案：所有的存储数据均存储在mongodb数据库中，别忘建立索引。考虑映入lucene和solr
+具体的数据结构：
+      爬取链接管理表{url:"爬取url",title:"链接名称",digest:"摘要",isFeed:"是否是跟连接true,false",hasVisited:"是否是被访问过true,faslse",parseRule:"解析规则"}
+      
