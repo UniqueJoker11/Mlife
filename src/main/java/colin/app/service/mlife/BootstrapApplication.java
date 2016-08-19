@@ -14,6 +14,6 @@ public class BootstrapApplication {
     public static void main(String[] args) {
         SpringApplication springApplication=new SpringApplication(BootstrapApplication.class);
         springApplication.setWebEnvironment(true);
-        springApplication.run();
+        springApplication.run(BootstrapApplication.class);
     }
 }

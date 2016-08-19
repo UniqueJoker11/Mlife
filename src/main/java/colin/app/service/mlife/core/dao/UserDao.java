@@ -1,9 +1,9 @@
 package colin.app.service.mlife.core.dao;
 
 import colin.app.service.mlife.core.pojo.User;
-import com.mongodb.QueryBuilder;
-import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -38,7 +38,7 @@ public class UserDao {
      * @return
      */
     public User authUserInfo(String username,String password){
-        Query userQuery=Query.query(new Criteria("username").is(username)).addCriteria(new Criteria("password").is(password));
+        Query userQuery=Query.query(new Criteria("username").is(username)).addCriteria(new Criteria("password").is(DigestUtils.sha1Hex(password)));
         List<User> users=mongoTemplate.find(userQuery,User.class);
         return null==users||users.isEmpty()?null:users.get(0);
     }

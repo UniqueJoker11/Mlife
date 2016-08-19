@@ -13,4 +13,12 @@ public interface UserService {
      * @return
      */
     public ReturnCommonResult isUserExists(String username);
+
+    /**
+     * 验证用户
+     * @param username
+     * @param password
+     * @return
+     */
+    public ReturnCommonResult authUserInfo(String username,String password);
 }
