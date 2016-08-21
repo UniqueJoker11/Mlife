@@ -672,12 +672,12 @@
 
 			// Changing document height on iOS devices triggers a 'resize' event,
 			// that can change document height... repeating infinitely
-			W.bind('orientationchange.fb' + (isTouch ? '' : ' ../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/resize.fb*/) + (current.autoCenter && !current.locked ? ' ../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/scroll.fb*/ : ''), F.update);
+			W.bind('orientationchange.fb' + (isTouch ? '' : ' /error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/resize.fb*/) + (current.autoCenter && !current.locked ? ' /error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/scroll.fb*/ : ''), F.update);
 
 			keys = current.keys;
 
 			if (keys) {
-				D.bind('../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/keydown.fb*/, function (e) {
+				D.bind('/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/keydown.fb*/, function (e) {
 					var code   = e.which || e.keyCode,
 						target = e.target || e.srcElement;
 
@@ -708,7 +708,7 @@
 			}
 
 			if ($.fn.mousewheel && current.mouseWheel) {
-				F.wrap.bind('../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/mousewheel.fb*/, function (e, delta, deltaX, deltaY) {
+				F.wrap.bind('/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/mousewheel.fb*/, function (e, delta, deltaX, deltaY) {
 					var target = e.target || null,
 						parent = $(target),
 						canScroll = false;
@@ -1007,7 +1007,7 @@
 
 					// iOS will lose scrolling if we resize
 					if (!isTouch) {
-						$(this).bind('../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/load.fb*/, F.update);
+						$(this).bind('/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/load.fb*/, F.update);
 					}
 
 					// Without this trick:
@@ -1432,7 +1432,7 @@
 
 			// Assign a click event
 			if ( current.closeClick || (current.nextClick && F.group.length > 1) ) {
-				F.inner.css('cursor', 'pointer').bind('../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, function(e) {
+				F.inner.css('cursor', 'pointer').bind('/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, function(e) {
 					if (!$(e.target).is('a') && !$(e.target).parent().is('a')) {
 						e.preventDefault();
 
@@ -1443,7 +1443,7 @@
 
 			// Create a close button
 			if (current.closeBtn) {
-				$(current.tpl.closeBtn).appendTo(F.skin).bind('../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, function(e) {
+				$(current.tpl.closeBtn).appendTo(F.skin).bind('/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, function(e) {
 					e.preventDefault();
 
 					F.close();
@@ -1453,11 +1453,11 @@
 			// Create navigation arrows
 			if (current.arrows && F.group.length > 1) {
 				if (current.loop || current.index > 0) {
-					$(current.tpl.prev).appendTo(F.outer).bind('../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, F.prev);
+					$(current.tpl.prev).appendTo(F.outer).bind('/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, F.prev);
 				}
 
 				if (current.loop || current.index < F.group.length - 1) {
-					$(current.tpl.next).appendTo(F.outer).bind('../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, F.next);
+					$(current.tpl.next).appendTo(F.outer).bind('/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/fancybox/click.fb*/, F.next);
 				}
 			}
 

@@ -60,19 +60,4 @@ public class LoginModuleController extends CommonController{
       return adminView;
     }
 
-    /**
-     * 用户注销
-     * @param username
-     * @return
-     */
-    @RequestMapping(value = "logout",method = RequestMethod.POST)
-    public ModelAndView adminLogout(String username){
-        if(null!=super.getHttpSession().getAttribute(username)){
-            super.getHttpSession().removeAttribute(username);
-        }
-        ModelAndView logoutView=new ModelAndView();
-        logoutView.setViewName("redirect:login");
-        return logoutView;
-    }
-
 }

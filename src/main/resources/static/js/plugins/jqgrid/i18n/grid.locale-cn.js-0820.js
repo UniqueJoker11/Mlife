@@ -125,8 +125,8 @@ $.jgrid.regional["cn"] = {
     },
     formatter : {
         integer : {thousandsSeparator: ",", defaultValue: '0'},
-        number : {decimalSeparator:".", thousandsSeparator: ",", decimalPlaces: 2, defaultValue: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/jqgrid/i18n/0.00*/},
-        currency : {decimalSeparator:".", thousandsSeparator: ",", decimalPlaces: 2, prefix: "", suffix:"", defaultValue: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/jqgrid/i18n/0.00*/},
+        number : {decimalSeparator:".", thousandsSeparator: ",", decimalPlaces: 2, defaultValue: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/jqgrid/i18n/0.00*/},
+        currency : {decimalSeparator:".", thousandsSeparator: ",", decimalPlaces: 2, prefix: "", suffix:"", defaultValue: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/jqgrid/i18n/0.00*/},
         date : {
             dayNames:   [
                 "日", "一", "二", "三", "四", "五", "六",

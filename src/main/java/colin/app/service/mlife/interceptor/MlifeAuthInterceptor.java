@@ -29,6 +29,10 @@ public class MlifeAuthInterceptor implements HandlerInterceptor {
             Cookie[] userCookie = httpServletRequest.getCookies();
             boolean hasUser = false;
             StringBuilder user = new StringBuilder();
+            if(null==userCookie||userCookie.length<=0){
+                httpServletResponse.sendRedirect("/mlife/admin/login");
+                return false;
+            }
             for (Cookie cookie : userCookie) {
                 if (cookie.getName().equals("user")) {
                     hasUser = true;

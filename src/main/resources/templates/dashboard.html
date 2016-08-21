@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +14,11 @@
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
 
-    <link rel="shortcut icon" href="favicon.ico" tppabs="http://www.zi-han.net/theme/hplus/favicon.ico">
-    <link href="${ctxPath}/css/bootstrap.min.css-v=3.3.5.css" tppabs="http://www.zi-han.net/theme/hplus/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
-    <link href="${ctxPath}/css/font-awesome.min.css-v=4.4.0.css" tppabs="http://www.zi-han.net/theme/hplus/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-    <link href="${ctxPath}/css/animate.min.css" tppabs="http://www.zi-han.net/theme/hplus/css/animate.min.css" rel="stylesheet">
-    <link href="${ctxPath}/css/style.min.css-v=4.0.0.css" tppabs="http://www.zi-han.net/theme/hplus/css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link rel="shortcut icon" href="${ctxPath}/favicon.ico">
+    <link href="${ctxPath}/css/bootstrap.min.css-v=3.3.5.css" rel="stylesheet">
+    <link href="${ctxPath}/css/font-awesome.min.css-v=4.4.0.css" rel="stylesheet">
+    <link href="${ctxPath}/css/animate.min.css" rel="stylesheet">
+    <link href="${ctxPath}/css/style.min.css-v=4.0.0.css" rel="stylesheet">
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -32,7 +31,7 @@
                 <ul class="nav" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <span><img alt="image" class="img-circle" src="img/profile_small.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/profile_small.jpg" /></span>
+                            <span><img alt="image" class="img-circle" src="${ctxPath}/img/profile_small.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/profile_small.jpg" /></span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
@@ -49,68 +48,35 @@
                                 <li><a class="J_menuItem" href="mailbox.html" tppabs="http://www.zi-han.net/theme/hplus/mailbox.html">信箱</a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a href="login.html" tppabs="http://www.zi-han.net/theme/hplus/login.html">安全退出</a>
+                                <li><a href="logout" tppabs="http://www.zi-han.net/theme/hplus/login.html">安全退出</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="logo-element">H+
                         </div>
                     </li>
-                    <li>
-                        <a href="#">
+                   <!-- <li>
+                        <a href="index">
                             <i class="fa fa-home"></i>
                             <span class="nav-label">主页</span>
                             <span class="fa arrow"></span>
                         </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="J_menuItem" href="index_v1.html" tppabs="http://www.zi-han.net/theme/hplus/index_v1.html" data-index="0">主页示例一</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="index_v2.html" tppabs="http://www.zi-han.net/theme/hplus/index_v2.html">主页示例二</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="index_v3.html" tppabs="http://www.zi-han.net/theme/hplus/index_v3.html">主页示例三</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="index_v4.html" tppabs="http://www.zi-han.net/theme/hplus/index_v4.html">主页示例四</a>
-                            </li>
-                            <li>
-                                <a href="index_v5.html" tppabs="http://www.zi-han.net/theme/hplus/index_v5.html" target="_blank">主页示例五</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a class="J_menuItem" href="layouts.html" tppabs="http://www.zi-han.net/theme/hplus/layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
-                    </li>
+                    </li>-->
                     <li>
                         <a href="#">
                             <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">统计图表</span>
+                            <span class="nav-label">爬虫管理</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="graph_echarts.html" tppabs="http://www.zi-han.net/theme/hplus/graph_echarts.html">百度ECharts</a>
+                                <a class="J_menuItem" href="web_crawler" tppabs="">爬虫链接管理</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_flot.html" tppabs="http://www.zi-han.net/theme/hplus/graph_flot.html">Flot</a>
+                                <a class="J_menuItem" href="web_parser.html" tppabs="http://www.zi-han.net/">解析器管理</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_morris.html" tppabs="http://www.zi-han.net/theme/hplus/graph_morris.html">Morris.js</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_rickshaw.html" tppabs="http://www.zi-han.net/theme/hplus/graph_rickshaw.html">Rickshaw</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_peity.html" tppabs="http://www.zi-han.net/theme/hplus/graph_peity.html">Peity</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_sparkline.html" tppabs="http://www.zi-han.net/theme/hplus/graph_sparkline.html">Sparkline</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_metrics.html" tppabs="http://www.zi-han.net/theme/hplus/graph_metrics.html">图表组合</a>
+                                <a class="J_menuItem" href="crawler_parser.html" tppabs="http://www.zi-han.net/">解析器管理</a>
                             </li>
                         </ul>
                     </li>
@@ -126,10 +92,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
+                    <!--<li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label"></span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_basic.html" tppabs="http://www.zi-han.net/theme/hplus/form_basic.html">基本表单</a>
+                            <li><a class="J_menuItem" href="form_basic.html" tppabs="http://www.zi-han.net/theme/hplus/form_basic.html"></a>
                             </li>
                             <li><a class="J_menuItem" href="form_validate.html" tppabs="http://www.zi-han.net/theme/hplus/form_validate.html">表单验证</a>
                             </li>
@@ -166,9 +132,9 @@
                             <li><a class="J_menuItem" href="layerdate.html" tppabs="http://www.zi-han.net/theme/hplus/layerdate.html">日期选择器layerDate</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li>
-                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">系统管理</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a class="J_menuItem" href="contacts.html" tppabs="http://www.zi-han.net/theme/hplus/contacts.html">联系人</a>
                             </li>
@@ -250,103 +216,15 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="404.html" tppabs="http://www.zi-han.net/theme/hplus/404.html">404页面</a>
+                            <li><a class="J_menuItem" href="error/404.html" tppabs="http://www.zi-han.net/theme/hplus/404.html">404页面</a>
                             </li>
-                            <li><a class="J_menuItem" href="500.html" tppabs="http://www.zi-han.net/theme/hplus/500.html">500页面</a>
+                            <li><a class="J_menuItem" href="error/500.html" tppabs="http://www.zi-han.net/theme/hplus/500.html">500页面</a>
                             </li>
                             <li><a class="J_menuItem" href="empty_page.html" tppabs="http://www.zi-han.net/theme/hplus/empty_page.html">空白页</a>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="typography.html" tppabs="http://www.zi-han.net/theme/hplus/typography.html">排版</a>
-                            </li>
-                            <li>
-                                <a href="#">字体图标 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a class="J_menuItem" href="fontawesome.html" tppabs="http://www.zi-han.net/theme/hplus/fontawesome.html">Font Awesome</a>
-                                    </li>
-                                    <li>
-                                        <a class="J_menuItem" href="glyphicons.html" tppabs="http://www.zi-han.net/theme/hplus/glyphicons.html">Glyphicon</a>
-                                    </li>
-                                    <li>
-                                        <a class="J_menuItem" href="iconfont.html" tppabs="http://www.zi-han.net/theme/hplus/iconfont.html">阿里巴巴矢量图标库</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">拖动排序 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="draggable_panels.html" tppabs="http://www.zi-han.net/theme/hplus/draggable_panels.html">拖动面板</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="agile_board.html" tppabs="http://www.zi-han.net/theme/hplus/agile_board.html">任务清单</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="J_menuItem" href="buttons.html" tppabs="http://www.zi-han.net/theme/hplus/buttons.html">按钮</a>
-                            </li>
-                            <li><a class="J_menuItem" href="tabs_panels.html" tppabs="http://www.zi-han.net/theme/hplus/tabs_panels.html">选项卡 &amp; 面板</a>
-                            </li>
-                            <li><a class="J_menuItem" href="notifications.html" tppabs="http://www.zi-han.net/theme/hplus/notifications.html">通知 &amp; 提示</a>
-                            </li>
-                            <li><a class="J_menuItem" href="badges_labels.html" tppabs="http://www.zi-han.net/theme/hplus/badges_labels.html">徽章，标签，进度条</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="grid_options.html" tppabs="http://www.zi-han.net/theme/hplus/grid_options.html">栅格</a>
-                            </li>
-                            <li><a class="J_menuItem" href="plyr.html" tppabs="http://www.zi-han.net/theme/hplus/plyr.html">视频、音频</a>
-                            </li>
-                            <li>
-                                <a href="#">弹框插件 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="layer.html" tppabs="http://www.zi-han.net/theme/hplus/layer.html">Web弹层组件layer</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="modal_window.html" tppabs="http://www.zi-han.net/theme/hplus/modal_window.html">模态窗口</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="sweetalert.html" tppabs="http://www.zi-han.net/theme/hplus/sweetalert.html">SweetAlert</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">树形视图 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="jstree.html" tppabs="http://www.zi-han.net/theme/hplus/jstree.html">jsTree</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="tree_view.html" tppabs="http://www.zi-han.net/theme/hplus/tree_view.html">Bootstrap Tree View</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="nestable_list.html" tppabs="http://www.zi-han.net/theme/hplus/nestable_list.html">nestable</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="J_menuItem" href="toastr_notifications.html" tppabs="http://www.zi-han.net/theme/hplus/toastr_notifications.html">Toastr通知</a>
-                            </li>
-                            <li><a class="J_menuItem" href="diff.html" tppabs="http://www.zi-han.net/theme/hplus/diff.html">文本对比</a>
-                            </li>
-                            <li><a class="J_menuItem" href="spinners.html" tppabs="http://www.zi-han.net/theme/hplus/spinners.html">加载动画</a>
-                            </li>
-                            <li><a class="J_menuItem" href="widgets.html" tppabs="http://www.zi-han.net/theme/hplus/widgets.html">小部件</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="table_basic.html" tppabs="http://www.zi-han.net/theme/hplus/table_basic.html">基本表格</a>
-                            </li>
-                            <li><a class="J_menuItem" href="table_data_tables.html" tppabs="http://www.zi-han.net/theme/hplus/table_data_tables.html">DataTables</a>
-                            </li>
-                            <li><a class="J_menuItem" href="table_jqgrid.html" tppabs="http://www.zi-han.net/theme/hplus/table_jqgrid.html">jqGrid</a>
-                            </li>
-                            <li><a class="J_menuItem" href="table_foo_table.html" tppabs="http://www.zi-han.net/theme/hplus/table_foo_table.html">Foo Tables</a>
-                            </li>
-                            <li><a class="J_menuItem" href="table_bootstrap.html" tppabs="http://www.zi-han.net/theme/hplus/table_bootstrap.html">Bootstrap Table
-                                <span class="label label-danger pull-right">推荐</span></a>
-                            </li>
-                        </ul>
-                    </li>
+
                     <li>
                         <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -395,7 +273,7 @@
                                 <li class="m-t-xs">
                                     <div class="dropdown-messages-box">
                                         <a href="profile.html" tppabs="http://www.zi-han.net/theme/hplus/profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="img/a7.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a7.jpg">
+                                            <img alt="image" class="img-circle" src="${ctxPath}/img/title.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a7.jpg">
                                         </a>
                                         <div class="media-body">
                                             <small class="pull-right">46小时前</small>
@@ -409,7 +287,7 @@
                                 <li>
                                     <div class="dropdown-messages-box">
                                         <a href="profile.html" tppabs="http://www.zi-han.net/theme/hplus/profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="img/a4.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a4.jpg">
+                                            <img alt="image" class="img-circle" src="${ctxPath}/img/a4.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a4.jpg">
                                         </a>
                                         <div class="media-body ">
                                             <small class="pull-right text-navy">25小时前</small>
@@ -497,7 +375,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="login.html" tppabs="http://www.zi-han.net/theme/hplus/login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+                <a href="logout" tppabs="http://www.zi-han.net/theme/hplus/login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
             </div>
             <div class="row J_mainContent" id="content-main">
                 <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index" tppabs="http://www.zi-han.net/theme/hplus/index_v1.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
@@ -613,7 +491,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a1.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a1.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a1.jpg">
 
                                         <div class="m-t-xs">
                                             <i class="fa fa-star text-warning"></i>
@@ -631,7 +509,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a2.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a2.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a2.jpg">
                                     </div>
                                     <div class="media-body">
                                         HCY48之音乐大魔王会员专属皮肤已上线，快来一键换装拥有他，宣告你对华晨宇的爱吧！
@@ -643,7 +521,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a3.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a3.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a3.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a3.jpg">
 
                                         <div class="m-t-xs">
                                             <i class="fa fa-star text-warning"></i>
@@ -661,7 +539,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a4.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a4.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a4.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a4.jpg">
                                     </div>
 
                                     <div class="media-body">
@@ -674,7 +552,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a8.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a8.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a8.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a8.jpg">
                                     </div>
                                     <div class="media-body">
 
@@ -687,7 +565,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a7.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a7.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a7.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a7.jpg">
                                     </div>
                                     <div class="media-body">
                                         这哥们的新视频又来了，创意杠杠滴，帅炸了！
@@ -699,7 +577,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a3.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a3.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a3.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a3.jpg">
 
                                         <div class="m-t-xs">
                                             <i class="fa fa-star text-warning"></i>
@@ -717,7 +595,7 @@
                             <div class="sidebar-message">
                                 <a href="#">
                                     <div class="pull-left text-center">
-                                        <img alt="image" class="img-circle message-avatar" src="img/a4.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a4.jpg">
+                                        <img alt="image" class="img-circle message-avatar" src="${ctxPath}/img/a4.jpg" tppabs="http://www.zi-han.net/theme/hplus/img/a4.jpg">
                                     </div>
                                     <div class="media-body">
                                         我发起了一个投票 【你认为下午大盘会翻红吗？】
@@ -917,14 +795,14 @@
             </a>
         </div>
     </div>
-    <script src="${ctxPath}/jsjquery.min.js-v=2.1.4.js" tppabs="http://www.zi-han.net/theme/hplus/js/jquery.min.js?v=2.1.4"></script>
-    <script src="${ctxPath}/jsbootstrap.min.js-v=3.3.5.js" tppabs="http://www.zi-han.net/theme/hplus/js/bootstrap.min.js?v=3.3.5"></script>
-    <script src="${ctxPath}/jsplugins/metisMenu/jquery.metisMenu.js" tppabs="http://www.zi-han.net/theme/hplus/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="${ctxPath}/jsplugins/slimscroll/jquery.slimscroll.min.js" tppabs="http://www.zi-han.net/theme/hplus/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="${ctxPath}/jsplugins/layer/layer.min.js" tppabs="http://www.zi-han.net/theme/hplus/js/plugins/layer/layer.min.js"></script>
-    <script src="${ctxPath}/jshplus.min.js-v=4.0.0.js" tppabs="http://www.zi-han.net/theme/hplus/js/hplus.min.js?v=4.0.0"></script>
-    <script type="text/javascript" src="${ctxPath}/jscontabs.min.js" tppabs="http://www.zi-han.net/theme/hplus/js/contabs.min.js"></script>
-    <script src="${ctxPath}/jsplugins/pace/pace.min.js" tppabs="http://www.zi-han.net/theme/hplus/js/plugins/pace/pace.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/jquery.min.js-v=2.1.4.js" ></script>
+    <script type="text/javascript" src="${ctxPath}/js/bootstrap.min.js-v=3.3.5.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/plugins/layer/layer.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/hplus.min.js-v=4.0.0.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/contabs.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/js/plugins/pace/pace.min.js"></script>
 </body>
 
 </html>

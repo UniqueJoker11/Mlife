@@ -23,9 +23,9 @@ public class ExceptionConfig implements HandlerExceptionResolver {
         ModelAndView errorView=new ModelAndView();
         log.error("系统报错了,{}",e);
         if(e instanceof Exception){
-            errorView.setViewName("500");
+            errorView.setViewName("error/500");
         }else if(e instanceof MlifeAuthException){
-            errorView.setViewName("500");
+            errorView.setViewName("error/500");
             errorView.addObject("msg","未注册的用户不准登录");
         }
         return errorView;
