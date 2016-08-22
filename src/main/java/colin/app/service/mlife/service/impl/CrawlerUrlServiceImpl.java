@@ -5,6 +5,7 @@ import colin.app.service.mlife.core.common.ReturnCommonResult;
 import colin.app.service.mlife.core.common.SystemConstants;
 import colin.app.service.mlife.core.dao.CrawlerURLDao;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
+import colin.app.service.mlife.observer.CrawlerURLHandlerObserver;
 import colin.app.service.mlife.service.CrawlerUrlService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.time.DateFormatUtils;
@@ -13,19 +14,28 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Observable;
 
 /**
  * Created by joker on 16/8/21.
  */
 @Service
-public class CrawlerUrlServiceImpl implements CrawlerUrlService{
+public class CrawlerUrlServiceImpl extends Observable implements CrawlerUrlService{
     private final static Logger log= LoggerFactory.getLogger(CrawlerUrlServiceImpl.class);
 
     @Autowired
     private CrawlerURLDao crawlerURLDao;
 
+    @Autowired
+    private CrawlerURLHandlerObserver crawlerURLHandlerObserver;
+
+    @PostConstruct
+    public void initCrawlerObserver(){
+        this.addObserver(crawlerURLHandlerObserver);
+    }
     /**
      * 添加爬虫URL
      *
@@ -38,6 +48,8 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService{
             CrawlerURL crawlerURL=this.transferCrawler(crawlerUrlWrapper);
             crawlerURLDao.addCrawlerURL(crawlerURL);
             result=new ReturnCommonResult(true);
+            this.setChanged();
+            this.notifyObservers(crawlerURL);
         }catch (Exception e){
            log.error("添加爬取URL出错:{}",e);
             result=new ReturnCommonResult(false);
