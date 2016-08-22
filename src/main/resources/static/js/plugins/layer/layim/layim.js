@@ -10,20 +10,20 @@
 ;!function(win, undefined){
 
 var config = {
-    msgurl: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/mailbox.html?msg=*/,
-    chatlogurl: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/mailbox.html?user=*/,
+    msgurl: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/mailbox.html?msg=*/,
+    chatlogurl: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/mailbox.html?user=*/,
     aniTime: 200,
     right: -232,
     api: {
-        friend: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/friend.json*/, //好友列表接口
-        group: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/group.json*/, //群组列表接口 
-        chatlog: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/chatlog.json*/, //聊天记录接口
-        groups: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/groups.json*/, //群组成员接口
+        friend: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/friend.json*/, //好友列表接口
+        group: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/group.json*/, //群组列表接口
+        chatlog: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/chatlog.json*/, //聊天记录接口
+        groups: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/js/plugins/layer/layim/data/groups.json*/, //群组成员接口
         sendurl: '' //发送消息接口
     },
     user: { //当前用户信息
         name: '游客',
-        face: '../../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/img/a1.jpg*/
+        face: './error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/layer/layim/img/a1.jpg*/
     },
     
     //自动回复内置文案，也可动态读取数据库配置

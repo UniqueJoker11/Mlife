@@ -868,7 +868,7 @@ InputManager = (function(_super) {
           return;
         }
         if (!imageFile.name) {
-          imageFile.name = "../../../../../error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/Clipboard Image.png*/;
+          imageFile.name = "/error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/Clipboard Image.png*/;
         }
         uploadOpt = {};
         uploadOpt[this.opts.pasteImage] = true;
@@ -953,7 +953,7 @@ InputManager = (function(_super) {
                   return;
                 }
                 blob = _this.editor.util.dataURLtoBlob($img.attr("src"));
-                blob.name = "../../../../../error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/Clipboard Image.png*/;
+                blob.name = "/error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/Clipboard Image.png*/;
                 uploadOpt = {};
                 uploadOpt[_this.opts.pasteImage] = true;
                 if ((_ref2 = _this.editor.uploader) != null) {
@@ -2118,7 +2118,7 @@ Simditor = (function(_super) {
   Simditor.prototype.opts = {
     textarea: null,
     placeholder: '',
-    defaultImage: '../../../../../error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/images/image.png*/,
+    defaultImage: '/error/ie.html'/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/images/image.png*/,
     params: {},
     upload: false,
     tabIndent: true
@@ -4127,7 +4127,7 @@ ImagePopover = (function(_super) {
             }
             if (/^data:image/.test(src)) {
               blob = _this.editor.util.dataURLtoBlob(src);
-              blob.name = "../../../../../error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/Base64 Image.png*/;
+              blob.name = "/error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/simditor/Base64 Image.png*/;
               return _this.editor.uploader.upload(blob, {
                 inline: true,
                 img: _this.target

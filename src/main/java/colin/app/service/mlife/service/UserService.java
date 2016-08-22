@@ -20,5 +20,5 @@ public interface UserService {
      * @param password
      * @return
      */
-    public ReturnCommonResult authUserInfo(String username,String password);
+    public ReturnCommonResult authUserInfo(String username, String password);
 }

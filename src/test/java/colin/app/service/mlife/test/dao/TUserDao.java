@@ -27,8 +27,8 @@ public class TUserDao extends CommonTestConfig{
      */
     private User initaddUser(){
         User user=new User();
-        user.setUsername("colin");
-        user.setNickname("joker");
+        user.setUsername("admin");
+        user.setNickname("jack");
         user.setPassword(DigestUtils.sha1Hex("123456"));
         user.setAddress("China zhejiang hangzhou");
         user.setSex(1);

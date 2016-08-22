@@ -4469,7 +4469,7 @@
   }
 
   // Passed to option handlers when there is no old value.
-  var Init = CodeMirror.Init = {toString: function(){return "../../../../../error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/codemirror/CodeMirror.Init*/;}};
+  var Init = CodeMirror.Init = {toString: function(){return "/error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/codemirror/CodeMirror.Init*/;}};
 
   // These two are, on init, called from the constructor because they
   // have to be initialized before the editor can start at all.
@@ -7196,7 +7196,7 @@
 
   // Returned or thrown by various protocols to signal 'I'm not
   // handling this'.
-  var Pass = CodeMirror.Pass = {toString: function(){return "../../../../../error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/codemirror/CodeMirror.Pass*/;}};
+  var Pass = CodeMirror.Pass = {toString: function(){return "/error/ie.html"/*tpa=http://www.zi-han.net/theme/hplus/js/plugins/codemirror/CodeMirror.Pass*/;}};
 
   // Reused option objects for setSelection & friends
   var sel_dontScroll = {scroll: false}, sel_mouse = {origin: "*mouse"}, sel_move = {origin: "+move"};
