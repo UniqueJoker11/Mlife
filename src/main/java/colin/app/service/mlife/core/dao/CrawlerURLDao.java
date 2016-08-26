@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -54,4 +55,32 @@ public class CrawlerURLDao {
         return crawlerURLs;
     }
 
+    /**
+     * 批量插入数据
+     * @param crawlerURLs
+     */
+    public void addCrawlerURLs(List<CrawlerURL> crawlerURLs){
+        mongoTemplate.insert(crawlerURLs,CRAWLER_URL_COLLECTION);
+    }
+
+    /**
+     * 查询没有爬取过的URL
+     * @return
+     */
+    public List<CrawlerURL> findUnCrawlerURL(){
+        Query crawlerQuery=Query.query(new Criteria("crawlerStatus").is(0)).addCriteria(Criteria.where("isRootUrl").is(0));
+        List<CrawlerURL> crawlerURLs=mongoTemplate.find(crawlerQuery,CrawlerURL.class,CRAWLER_URL_COLLECTION);
+        return crawlerURLs;
+    }
+
+    /**
+     * 更新爬取状态
+     * @param ids
+     */
+    public void updateCrawlerURL(List<String> ids){
+        Query crawlerQuery=Query.query(Criteria.where("_id").in(ids));
+        Update crawlerUpdate=Update.update("crawlerStatus",1);
+        WriteResult result= mongoTemplate.updateMulti(crawlerQuery, crawlerUpdate, CRAWLER_URL_COLLECTION);
+        System.out.println(result);
+    }
 }

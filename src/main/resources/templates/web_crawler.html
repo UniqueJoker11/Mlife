@@ -250,10 +250,13 @@
                         "pageIndex": d.start + 1, "pageSize": d.length
                     };
                 },
-                "dataSrc": function ( json ) {
-                    var data= $.extend({},{"data":json});
-                    console.log(data);
-                    return data;
+                "dataSrc": function ( data ) {
+                    if(data!=null&&data.length>0&&!data.success&&data.data!=null){
+                        console.log(data);
+                        return $.extend({},data);
+                    }else{
+                        return [];
+                    }
                 }
             },
             columns: [
@@ -307,7 +310,12 @@
             }
         }
     }
+   var dataTableUtils=function(){
+       this.combineDataTable=function(data){
+           var result=new Array();
 
+       }
+   }
 </script>
 </body>
 

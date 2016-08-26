@@ -5,6 +5,7 @@ import colin.app.service.mlife.core.common.ReturnCommonResult;
 import colin.app.service.mlife.core.common.SystemConstants;
 import colin.app.service.mlife.core.dao.CrawlerURLDao;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
+import colin.app.service.mlife.core.utils.MLifteDateUtils;
 import colin.app.service.mlife.observer.CrawlerURLHandlerObserver;
 import colin.app.service.mlife.service.CrawlerUrlService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -85,7 +86,7 @@ public class CrawlerUrlServiceImpl extends Observable implements CrawlerUrlServi
     private CrawlerURL transferCrawler(CrawlerUrlWrapper crawlerUrlWrapper){
         ObjectMapper mapper=new ObjectMapper();
         CrawlerURL crawlerURL=mapper.convertValue(crawlerUrlWrapper,CrawlerURL.class);
-        String initDate=DateFormatUtils.format(Calendar.getInstance().getTime(),"yyyy-MM-dd HH-mm-ss");
+        String initDate= MLifteDateUtils.getCurrentDate();
         crawlerURL.setCreateDate(initDate);
         crawlerURL.setUpdateDate(initDate);
         return crawlerURL;

@@ -1,18 +1,16 @@
 package colin.app.service.mlife.observer;
 
 import colin.app.service.mlife.core.common.SystemConstants;
-import colin.app.service.mlife.core.dao.CrawlerAticleDao;
-import colin.app.service.mlife.core.parser.BoLeWebIndexParser;
-import colin.app.service.mlife.core.pojo.CrawlerAticle;
+import colin.app.service.mlife.core.dao.CrawlerURLDao;
+import colin.app.service.mlife.core.parser.CrawlerBaseParser;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -25,7 +23,7 @@ public class CrawlerURLHandlerObserver implements Observer {
     private final static Logger log = LoggerFactory.getLogger(CrawlerURLHandlerObserver.class);
 
     @Autowired
-    private CrawlerAticleDao crawlerAticleDao;
+    private CrawlerURLDao crawlerURLDao;
 
     /**
      * This method is called whenever the observed object is changed. An
@@ -73,19 +71,17 @@ public class CrawlerURLHandlerObserver implements Observer {
                 ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
                 String parserClass = crawlerURL.getCrawlerParser();
                 Class loadClass = classLoader.loadClass(parserClass);
-                if (parserClass.endsWith("BoLeWebIndexParser")) {
-                    BoLeWebIndexParser parser = (BoLeWebIndexParser) loadClass.newInstance();
-                    parser.setUrl(crawlerURL.getUrl());
-                    List<CrawlerAticle> crawlerAticleList = parser.urlPageHandler();
-                    crawlerAticleDao.addCrawlerAticles(crawlerAticleList);
-                } else if (parserClass.endsWith("")) {
-
-                }
+                CrawlerBaseParser<CrawlerURL> parser = (CrawlerBaseParser) loadClass.newInstance();
+                parser.setUrl(crawlerURL.getUrl());
+                //添加要爬取的链接
+                crawlerURLDao.addCrawlerURLs(parser.urlPageHandler());
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }

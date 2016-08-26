@@ -9,11 +9,13 @@ import java.io.Serializable;
  */
 @Document
 public class CrawlerURL implements Serializable{
+    private String id;
+    //用户url
     private String url;
     //链接描述
     private String urlDecription;
     //是否是根节点
-    private boolean isRootUrl;
+    private int isRootUrl;
     //父级节点
     private String parentUrl;
     //页面解析器
@@ -24,6 +26,14 @@ public class CrawlerURL implements Serializable{
     private String createDate;
     //更新日期
     private String updateDate;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getUpdateDate() {
         return updateDate;
@@ -65,12 +75,12 @@ public class CrawlerURL implements Serializable{
         this.urlDecription = urlDecription;
     }
 
-    public boolean isRootUrl() {
+    public int getIsRootUrl() {
         return isRootUrl;
     }
 
-    public void setRootUrl(boolean rootUrl) {
-        isRootUrl = rootUrl;
+    public void setIsRootUrl(int isRootUrl) {
+        this.isRootUrl = isRootUrl;
     }
 
     public String getCrawlerParser() {
@@ -88,4 +98,5 @@ public class CrawlerURL implements Serializable{
     public void setCrawlerStatus(int crawlerStatus) {
         this.crawlerStatus = crawlerStatus;
     }
+
 }
