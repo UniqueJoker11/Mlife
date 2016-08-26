@@ -2,13 +2,19 @@ package colin.app.service.mlife.controller;
 
 import colin.app.service.mlife.controller.common.CommonController;
 import colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper;
+import colin.app.service.mlife.controller.wrapper.DataTableResultWrapper;
 import colin.app.service.mlife.core.common.ReturnCommonResult;
+import colin.app.service.mlife.core.pojo.CrawlerURL;
 import colin.app.service.mlife.service.CrawlerUrlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Created by joker on 16/8/19.
@@ -20,6 +26,7 @@ public class WebCrawlerController extends CommonController {
     @Autowired
     private CrawlerUrlService crawlerUrlService;
 
+    private static final AtomicLong requestTimes=new AtomicLong(0);
     /**
      * 显示爬虫配置页面
      *
@@ -38,12 +45,20 @@ public class WebCrawlerController extends CommonController {
      * @param pageSize
      * @return
      */
-    @RequestMapping(value = "list_web_crawler",method = RequestMethod.GET)
+    @RequestMapping(value = "list_web_crawler",method = RequestMethod.POST)
     @ResponseBody
-    public Object listCrawlerUrlInfo(@RequestParam int pageIndex,@RequestParam int pageSize){
-        ReturnCommonResult result=crawlerUrlService.listCrawlerURLsByPage(pageIndex,pageSize);
+    public Object listCrawlerUrlInfo(@RequestParam int start,@RequestParam int length){
+        ReturnCommonResult result=crawlerUrlService.listCrawlerURLsByPage(start/length+1,length);
         if(result.isSuccess()){
-            return result.getData();
+            DataTableResultWrapper dataTableResultWrapper=new DataTableResultWrapper();
+           Map<String,Object> resultMap= ( Map<String,Object>) result.getData();
+            List<CrawlerURL> crawlerURLs=(List<CrawlerURL>)resultMap.get("data");
+            Long totalSize=(Long)resultMap.get("total");
+            dataTableResultWrapper.setData(crawlerURLs);
+            dataTableResultWrapper.setDraw(requestTimes.addAndGet(1));
+            dataTableResultWrapper.setRecordsTotal(totalSize);
+            dataTableResultWrapper.setRecordsFiltered(totalSize);
+            return dataTableResultWrapper;
         }else {
             return null;
         }

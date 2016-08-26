@@ -4350,3 +4350,988 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
+2016-08-26 18:55:48 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 170768 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 18:55:48 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 18:55:48 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 18:55:48 CST 2016]; root of context hierarchy
+2016-08-26 18:55:49 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 18:55:51 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 18:55:51 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 18:55:51 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 18:55:51 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 18:55:51 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3011 ms
+2016-08-26 18:55:51 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 18:55:51 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 18:55:51 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 18:55:51 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 18:55:51 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 18:55:51 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 18:55:51 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 18:55:51 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:721}] to 121.40.144.146:27017
+2016-08-26 18:55:51 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=16386376}
+2016-08-26 18:55:51 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 18:55:52 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 18:55:48 CST 2016]; root of context hierarchy
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[GET]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 18:55:52 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 18:55:52 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 18:55:53 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 18:55:53 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 18:55:53 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 18:55:53 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 18:55:53 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 18:55:53 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.225 seconds (JVM running for 5.87)
+2016-08-26 18:56:30 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 18:56:30 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 18:56:30 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2016-08-26 18:56:32 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:722}] to 121.40.144.146:27017
+2016-08-26 19:00:08 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/60/完毕！
+2016-08-26 19:00:19 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/61/完毕！
+2016-08-26 19:00:35 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/62/完毕！
+2016-08-26 19:00:53 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/63/完毕！
+2016-08-26 19:01:07 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/64/完毕！
+2016-08-26 19:01:23 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/65/完毕！
+2016-08-26 19:01:36 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/66/完毕！
+2016-08-26 19:01:44 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/67/完毕！
+2016-08-26 19:01:56 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/68/完毕！
+2016-08-26 19:02:08 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/69/完毕！
+2016-08-26 19:02:18 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/70/完毕！
+2016-08-26 19:02:29 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/71/完毕！
+2016-08-26 19:02:37 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/72/完毕！
+2016-08-26 19:02:48 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/73/完毕！
+2016-08-26 19:02:59 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/74/完毕！
+2016-08-26 19:03:08 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/75/完毕！
+2016-08-26 19:03:17 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/76/完毕！
+2016-08-26 19:03:26 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/77/完毕！
+2016-08-26 19:03:34 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/78/完毕！
+2016-08-26 19:03:38 [colin.app.service.mlife.schedule.PageCrawlerSchedule:59] - 爬取链接http://web.jobbole.com/all-posts/page/79/完毕！
+2016-08-26 19:13:37 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 220312 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 19:13:37 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 19:13:37 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6eebe07e: startup date [Fri Aug 26 19:13:37 CST 2016]; root of context hierarchy
+2016-08-26 19:13:38 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 19:13:40 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 19:13:40 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 19:13:40 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 19:13:40 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 19:13:40 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3144 ms
+2016-08-26 19:13:41 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 19:13:41 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 19:13:41 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 19:13:41 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 19:13:41 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 19:13:41 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 19:13:41 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 19:13:41 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:723}] to 121.40.144.146:27017
+2016-08-26 19:13:41 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6454652}
+2016-08-26 19:13:41 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 19:13:42 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6eebe07e: startup date [Fri Aug 26 19:13:37 CST 2016]; root of context hierarchy
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[GET]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:13:42 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:13:42 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 19:13:42 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 19:13:42 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 19:13:42 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 19:13:42 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 19:13:42 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 19:13:42 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.473 seconds (JVM running for 6.168)
+2016-08-26 19:14:21 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 19:14:21 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 19:14:21 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-08-26 19:14:23 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:728}] to 121.40.144.146:27017
+2016-08-26 19:21:23 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 179028 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 19:21:23 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 19:21:24 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c217540: startup date [Fri Aug 26 19:21:24 CST 2016]; root of context hierarchy
+2016-08-26 19:21:24 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 19:21:27 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 19:21:27 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 19:21:27 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 19:21:27 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 19:21:27 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 2970 ms
+2016-08-26 19:21:27 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 19:21:27 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 19:21:27 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 19:21:27 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 19:21:27 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 19:21:27 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 19:21:27 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 19:21:27 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:729}] to 121.40.144.146:27017
+2016-08-26 19:21:27 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6889143}
+2016-08-26 19:21:27 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 19:21:28 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c217540: startup date [Fri Aug 26 19:21:24 CST 2016]; root of context hierarchy
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[GET]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:21:28 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:21:29 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 19:21:29 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 19:21:29 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 19:21:29 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 19:21:29 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 19:21:29 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 19:21:29 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.856 seconds (JVM running for 6.542)
+2016-08-26 19:26:02 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 19:26:02 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 19:26:02 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2016-08-26 19:26:03 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:730}] to 121.40.144.146:27017
+2016-08-26 19:47:01 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 92480 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 19:47:01 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 19:47:01 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39722ed5: startup date [Fri Aug 26 19:47:01 CST 2016]; root of context hierarchy
+2016-08-26 19:47:02 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 19:47:04 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 19:47:04 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 19:47:04 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 19:47:05 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 19:47:05 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3395 ms
+2016-08-26 19:47:05 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 19:47:05 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 19:47:05 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 19:47:05 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 19:47:05 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 19:47:05 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 19:47:05 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 19:47:05 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:731}] to 121.40.144.146:27017
+2016-08-26 19:47:05 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=7043382}
+2016-08-26 19:47:05 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 19:47:06 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39722ed5: startup date [Fri Aug 26 19:47:01 CST 2016]; root of context hierarchy
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[GET]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:47:06 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 19:47:06 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 19:47:06 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 19:47:06 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 19:47:06 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 19:47:06 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 19:47:06 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 19:47:06 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.884 seconds (JVM running for 6.627)
+2016-08-26 19:47:18 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 19:47:18 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 19:47:18 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2016-08-26 19:47:20 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:732}] to 121.40.144.146:27017
+2016-08-26 20:08:53 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 73392 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 20:08:53 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 20:08:53 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39722ed5: startup date [Fri Aug 26 20:08:53 CST 2016]; root of context hierarchy
+2016-08-26 20:08:55 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 20:08:57 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 20:08:57 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 20:08:57 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 20:08:57 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 20:08:57 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3676 ms
+2016-08-26 20:08:57 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 20:08:57 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 20:08:57 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 20:08:57 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 20:08:57 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 20:08:57 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 20:08:57 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 20:08:58 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:733}] to 121.40.144.146:27017
+2016-08-26 20:08:58 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6776813}
+2016-08-26 20:08:58 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 20:08:58 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39722ed5: startup date [Fri Aug 26 20:08:53 CST 2016]; root of context hierarchy
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[GET]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:08:58 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:08:59 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 20:08:59 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 20:08:59 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 20:08:59 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 20:08:59 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 20:08:59 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 20:08:59 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 6.313 seconds (JVM running for 6.996)
+2016-08-26 20:10:00 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:734}] to 121.40.144.146:27017
+2016-08-26 20:10:17 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 20:10:17 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 20:10:17 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2016-08-26 20:20:39 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 55360 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 20:20:39 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 20:20:39 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77d2efa0: startup date [Fri Aug 26 20:20:39 CST 2016]; root of context hierarchy
+2016-08-26 20:20:40 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 20:20:43 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 20:20:43 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 20:20:43 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 20:20:43 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 20:20:43 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3912 ms
+2016-08-26 20:20:43 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 20:20:43 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 20:20:43 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 20:20:43 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 20:20:43 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 20:20:43 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 20:20:43 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 20:20:44 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:737}] to 121.40.144.146:27017
+2016-08-26 20:20:44 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=7046803}
+2016-08-26 20:20:44 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 20:20:44 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77d2efa0: startup date [Fri Aug 26 20:20:39 CST 2016]; root of context hierarchy
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[GET]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:20:44 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:20:45 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 20:20:45 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 20:20:45 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 20:20:45 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 20:20:45 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 20:20:45 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 20:20:45 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 6.645 seconds (JVM running for 7.38)
+2016-08-26 20:21:03 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 72452 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 20:21:03 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 20:21:03 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39722ed5: startup date [Fri Aug 26 20:21:03 CST 2016]; root of context hierarchy
+2016-08-26 20:21:04 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 20:21:06 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 20:21:06 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 20:21:06 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 20:21:06 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 20:21:06 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3235 ms
+2016-08-26 20:21:07 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 20:21:07 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 20:21:07 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 20:21:07 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 20:21:07 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 20:21:07 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 20:21:07 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 20:21:07 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:738}] to 121.40.144.146:27017
+2016-08-26 20:21:07 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6710101}
+2016-08-26 20:21:07 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 20:21:08 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39722ed5: startup date [Fri Aug 26 20:21:03 CST 2016]; root of context hierarchy
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:21:08 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:21:08 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 20:21:08 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 20:21:08 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 20:21:08 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 20:21:08 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 20:21:08 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 20:21:08 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.796 seconds (JVM running for 6.723)
+2016-08-26 20:21:09 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 20:21:09 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 20:21:10 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 76 ms
+2016-08-26 20:21:11 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:739}] to 121.40.144.146:27017
+2016-08-26 20:30:12 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 107992 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 20:30:12 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 20:30:12 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6eebe07e: startup date [Fri Aug 26 20:30:12 CST 2016]; root of context hierarchy
+2016-08-26 20:30:13 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 20:30:15 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 20:30:15 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 20:30:15 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 20:30:15 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 20:30:15 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3253 ms
+2016-08-26 20:30:15 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 20:30:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 20:30:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 20:30:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 20:30:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 20:30:16 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 20:30:16 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 20:30:16 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:740}] to 121.40.144.146:27017
+2016-08-26 20:30:16 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6739181}
+2016-08-26 20:30:16 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 20:30:17 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6eebe07e: startup date [Fri Aug 26 20:30:12 CST 2016]; root of context hierarchy
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:30:17 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:30:17 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 20:30:17 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 20:30:17 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 20:30:17 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 20:30:17 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 20:30:17 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 20:30:17 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.765 seconds (JVM running for 6.463)
+2016-08-26 20:31:40 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 20:31:40 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 20:31:41 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2016-08-26 20:31:42 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:741}] to 121.40.144.146:27017
+2016-08-26 20:31:44 [colin.app.service.mlife.config.ExceptionConfig:24] - 系统报错了,{}
+java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer
+	at colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(WebCrawlerController.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-26 20:42:43 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 164560 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 20:42:43 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 20:42:43 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 20:42:43 CST 2016]; root of context hierarchy
+2016-08-26 20:42:44 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 20:42:46 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 20:42:46 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 20:42:46 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 20:42:46 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 20:42:46 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3284 ms
+2016-08-26 20:42:46 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 20:42:46 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 20:42:46 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 20:42:46 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 20:42:46 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 20:42:46 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 20:42:46 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 20:42:47 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:742}] to 121.40.144.146:27017
+2016-08-26 20:42:47 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=7011736}
+2016-08-26 20:42:47 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 20:42:47 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 20:42:43 CST 2016]; root of context hierarchy
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:42:47 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 20:42:48 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 20:42:48 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 20:42:48 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 20:42:48 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 20:42:48 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 20:42:48 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 20:42:48 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.835 seconds (JVM running for 6.487)
+2016-08-26 20:47:16 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 20:47:16 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 20:47:16 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2016-08-26 20:47:17 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:743}] to 121.40.144.146:27017
+2016-08-26 21:02:49 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 21996 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:02:49 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:02:49 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c217540: startup date [Fri Aug 26 21:02:49 CST 2016]; root of context hierarchy
+2016-08-26 21:02:49 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:02:51 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:02:51 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:02:51 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:02:51 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:02:51 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 2691 ms
+2016-08-26 21:02:52 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:02:52 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:02:52 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:02:52 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:02:52 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:02:52 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:02:52 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:02:52 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:744}] to 121.40.144.146:27017
+2016-08-26 21:02:52 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6839535}
+2016-08-26 21:02:52 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:02:53 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c217540: startup date [Fri Aug 26 21:02:49 CST 2016]; root of context hierarchy
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:02:53 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:02:53 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:02:53 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:02:53 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:02:53 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:02:53 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:02:53 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:02:53 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.819 seconds (JVM running for 6.45)
+2016-08-26 21:03:01 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:03:01 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:03:01 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2016-08-26 21:03:03 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:745}] to 121.40.144.146:27017
+2016-08-26 21:11:34 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 131356 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:11:34 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:11:34 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73eb8dd7: startup date [Fri Aug 26 21:11:34 CST 2016]; root of context hierarchy
+2016-08-26 21:11:34 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:11:37 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:11:37 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:11:37 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:11:37 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:11:37 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 2773 ms
+2016-08-26 21:11:37 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:11:37 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:11:37 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:11:37 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:11:37 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:11:37 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:11:37 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:11:37 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:746}] to 121.40.144.146:27017
+2016-08-26 21:11:37 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6793349}
+2016-08-26 21:11:37 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:11:38 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@73eb8dd7: startup date [Fri Aug 26 21:11:34 CST 2016]; root of context hierarchy
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:11:38 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:11:39 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:11:39 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:11:39 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:11:39 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:11:39 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:11:39 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:11:39 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.52 seconds (JVM running for 6.185)
+2016-08-26 21:11:44 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:11:44 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:11:44 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2016-08-26 21:11:45 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:747}] to 121.40.144.146:27017
+2016-08-26 21:11:48 [colin.app.service.mlife.config.ExceptionConfig:24] - 系统报错了,{}
+java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer
+	at colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(WebCrawlerController.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-26 21:13:00 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 145800 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:13:00 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:13:01 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 21:13:01 CST 2016]; root of context hierarchy
+2016-08-26 21:13:01 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:13:04 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:13:04 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:13:04 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:13:04 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:13:04 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3153 ms
+2016-08-26 21:13:04 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:13:04 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:13:04 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:13:04 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:13:04 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:13:04 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:13:04 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:13:04 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:748}] to 121.40.144.146:27017
+2016-08-26 21:13:04 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=9843914}
+2016-08-26 21:13:04 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:13:05 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 21:13:01 CST 2016]; root of context hierarchy
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:13:05 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:13:05 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:13:05 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:13:05 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:13:05 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:13:05 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:13:05 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:13:05 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.549 seconds (JVM running for 6.25)
+2016-08-26 21:13:20 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:13:20 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:13:20 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2016-08-26 21:13:22 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:749}] to 121.40.144.146:27017
+2016-08-26 21:14:20 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 151844 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:14:20 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:14:20 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70b6c3b9: startup date [Fri Aug 26 21:14:20 CST 2016]; root of context hierarchy
+2016-08-26 21:14:21 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:14:23 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:14:23 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:14:23 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:14:23 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:14:23 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 2963 ms
+2016-08-26 21:14:24 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:14:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:14:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:14:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:14:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:14:24 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:14:24 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:14:24 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:750}] to 121.40.144.146:27017
+2016-08-26 21:14:24 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6860348}
+2016-08-26 21:14:24 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:14:24 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70b6c3b9: startup date [Fri Aug 26 21:14:20 CST 2016]; root of context hierarchy
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:14:25 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:14:25 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:14:25 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:14:25 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:14:25 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:14:25 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:14:25 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:14:25 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.31 seconds (JVM running for 6.007)
+2016-08-26 21:14:29 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:14:29 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:14:29 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2016-08-26 21:14:30 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:751}] to 121.40.144.146:27017
+2016-08-26 21:17:12 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 187024 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:17:12 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:17:12 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 21:17:12 CST 2016]; root of context hierarchy
+2016-08-26 21:17:13 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:17:15 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:17:15 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:17:15 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:17:15 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:17:15 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 2827 ms
+2016-08-26 21:17:15 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:17:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:17:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:17:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:17:15 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:17:15 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:17:15 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:17:15 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:752}] to 121.40.144.146:27017
+2016-08-26 21:17:15 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=7187927}
+2016-08-26 21:17:15 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:17:16 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7760bf69: startup date [Fri Aug 26 21:17:12 CST 2016]; root of context hierarchy
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:17:16 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:17:16 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:17:16 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:17:16 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:17:16 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:17:16 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:17:16 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:17:16 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.328 seconds (JVM running for 6.068)
+2016-08-26 21:17:20 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:17:20 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:17:20 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2016-08-26 21:17:22 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:753}] to 121.40.144.146:27017
+2016-08-26 21:18:12 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 195568 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:18:12 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:18:13 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a315883: startup date [Fri Aug 26 21:18:13 CST 2016]; root of context hierarchy
+2016-08-26 21:18:13 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:18:16 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:18:16 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:18:16 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:18:16 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:18:16 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3324 ms
+2016-08-26 21:18:16 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:18:16 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:18:16 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:18:16 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:18:16 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:18:16 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:18:16 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:18:17 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:754}] to 121.40.144.146:27017
+2016-08-26 21:18:17 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=7345587}
+2016-08-26 21:18:17 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:18:17 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a315883: startup date [Fri Aug 26 21:18:13 CST 2016]; root of context hierarchy
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:18:17 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:18:18 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:18:18 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:18:18 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:18:18 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:18:18 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:18:18 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:18:18 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.802 seconds (JVM running for 6.62)
+2016-08-26 21:18:24 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:18:24 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:18:24 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2016-08-26 21:18:26 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:755}] to 121.40.144.146:27017
+2016-08-26 21:19:45 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:19:45 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 18340 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:19:45 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:19:45 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61edcc33: startup date [Fri Aug 26 21:19:45 CST 2016]; root of context hierarchy
+2016-08-26 21:19:48 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:19:48 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:19:48 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:19:48 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:19:48 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 2573 ms
+2016-08-26 21:19:48 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:19:48 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:19:48 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:19:48 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:19:48 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:19:48 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:19:48 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:19:48 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:756}] to 121.40.144.146:27017
+2016-08-26 21:19:48 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=7054501}
+2016-08-26 21:19:48 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:19:49 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61edcc33: startup date [Fri Aug 26 21:19:45 CST 2016]; root of context hierarchy
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:19:49 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:19:50 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:19:50 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:19:50 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:19:50 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:19:50 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:19:50 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:19:50 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 5.534 seconds (JVM running for 6.234)
+2016-08-26 21:19:53 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:19:53 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:19:53 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2016-08-26 21:19:55 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:757}] to 121.40.144.146:27017
+2016-08-26 21:21:21 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 102664 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:21:21 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:21:21 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@af664ec: startup date [Fri Aug 26 21:21:21 CST 2016]; root of context hierarchy
+2016-08-26 21:21:21 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:21:24 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:21:24 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:21:24 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:21:24 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:21:24 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3285 ms
+2016-08-26 21:21:24 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:21:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:21:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:21:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:21:24 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:21:25 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:21:25 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:21:25 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:758}] to 121.40.144.146:27017
+2016-08-26 21:21:25 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6727777}
+2016-08-26 21:21:25 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:21:25 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@af664ec: startup date [Fri Aug 26 21:21:21 CST 2016]; root of context hierarchy
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:21:26 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:21:26 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:21:26 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:21:26 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:21:26 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:21:26 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:21:26 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:21:26 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 6.314 seconds (JVM running for 8.13)
+2016-08-26 21:21:30 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:21:30 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:21:30 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 66 ms
+2016-08-26 21:21:32 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:759}] to 121.40.144.146:27017
+2016-08-26 21:22:22 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 172924 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:22:22 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:22:22 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21403f7d: startup date [Fri Aug 26 21:22:22 CST 2016]; root of context hierarchy
+2016-08-26 21:22:23 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:22:25 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:22:25 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:22:25 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:22:25 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:22:25 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3309 ms
+2016-08-26 21:22:25 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:22:25 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:22:25 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:22:25 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:22:25 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:22:26 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:22:26 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:22:26 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:760}] to 121.40.144.146:27017
+2016-08-26 21:22:26 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=8360256}
+2016-08-26 21:22:26 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:22:27 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21403f7d: startup date [Fri Aug 26 21:22:22 CST 2016]; root of context hierarchy
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:22:27 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:22:27 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:22:27 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:22:27 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:22:27 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:22:27 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:22:27 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:22:27 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 6.123 seconds (JVM running for 6.874)
+2016-08-26 21:22:38 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:22:38 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:22:38 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2016-08-26 21:22:39 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:761}] to 121.40.144.146:27017
+2016-08-26 21:23:35 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on LP-IM-LQ with PID 213080 (G:\opensource\Mlife\target\classes started by Administrator in G:\opensource\Mlife)
+2016-08-26 21:23:35 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-08-26 21:23:35 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5cee4df5: startup date [Fri Aug 26 21:23:35 CST 2016]; root of context hierarchy
+2016-08-26 21:23:37 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-08-26 21:23:39 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-08-26 21:23:39 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-08-26 21:23:39 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-26 21:23:39 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-08-26 21:23:39 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3468 ms
+2016-08-26 21:23:39 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-26 21:23:39 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-26 21:23:39 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-26 21:23:39 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-26 21:23:39 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-26 21:23:39 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-26 21:23:39 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-08-26 21:23:39 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:762}] to 121.40.144.146:27017
+2016-08-26 21:23:39 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=6372258}
+2016-08-26 21:23:39 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-08-26 21:23:40 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5cee4df5: startup date [Fri Aug 26 21:23:35 CST 2016]; root of context hierarchy
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:23:40 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-26 21:23:41 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-08-26 21:23:41 [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor:244] - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-08-26 21:23:41 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-08-26 21:23:41 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-08-26 21:23:41 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-08-26 21:23:41 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-08-26 21:23:41 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 6.221 seconds (JVM running for 7.026)
+2016-08-26 21:23:43 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-26 21:23:43 [org.springframework.web.servlet.FrameworkServlet:489] - FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-26 21:23:43 [org.springframework.web.servlet.FrameworkServlet:508] - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2016-08-26 21:23:44 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:763}] to 121.40.144.146:27017

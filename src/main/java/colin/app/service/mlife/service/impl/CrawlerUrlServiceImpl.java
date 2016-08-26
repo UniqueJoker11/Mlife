@@ -16,9 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Observable;
+import java.util.*;
 
 /**
  * Created by joker on 16/8/21.
@@ -72,12 +70,18 @@ public class CrawlerUrlServiceImpl extends Observable implements CrawlerUrlServi
             if(pageSize<0){
                 pageSize= SystemConstants.DEFAULT_PAGE_SIZE;
             }
+            Map<String,Object> result=new HashMap<String,Object>();
+            result.put("total",crawlerURLDao.countAllCrawlerURL());
             List<CrawlerURL> crawlerURLs=crawlerURLDao.findCrawlerURLByPage(pageIndex,pageSize);
-            commonResult=new ReturnCommonResult(true,crawlerURLs);
+            result.put("data",crawlerURLs);
+            commonResult=new ReturnCommonResult(true,result);
         }
         return commonResult;
     }
 
+    public ReturnCommonResult listAllCrawlerURL(){
+        return new ReturnCommonResult(true,crawlerURLDao.findAllCrawlerURL());
+    }
     /**
      * 转换包装类
      * @param crawlerUrlWrapper

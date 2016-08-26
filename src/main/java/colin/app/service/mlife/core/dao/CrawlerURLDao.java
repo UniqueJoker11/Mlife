@@ -56,6 +56,21 @@ public class CrawlerURLDao {
     }
 
     /**
+     * 统计所有的数量
+     * @return
+     */
+    public long countAllCrawlerURL(){
+       return mongoTemplate.count(null,CRAWLER_URL_COLLECTION);
+    }
+
+    /**
+     * 返回所有的内容
+     * @return
+     */
+    public List<CrawlerURL> findAllCrawlerURL(){
+        return mongoTemplate.findAll(CrawlerURL.class,CRAWLER_URL_COLLECTION);
+    }
+    /**
      * 批量插入数据
      * @param crawlerURLs
      */
