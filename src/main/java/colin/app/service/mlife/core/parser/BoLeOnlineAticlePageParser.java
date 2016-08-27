@@ -65,12 +65,20 @@ public class BoLeOnlineAticlePageParser extends CrawlerBaseParser<CrawlerAticle>
             crawlerAticle.setDigestSnapshot(digestSnapshot);
         }
         Element digestAticle = aticleDetailEle.getElementsByClass("post-meta").first();
-        crawlerAticle.setTitle(digestAticle.getElementsByClass("archive-title").first().attr("title"));
+        Elements titleEles=digestAticle.getElementsByClass("archive-title");
+        String aticleUrl="";
+        if(null!=titleEles&&titleEles.size()>0){
+            crawlerAticle.setTitle(titleEles.first().attr("title"));
+            aticleUrl=titleEles.first().attr("href");
+        }else{
+            Elements titlesBackupEles=digestAticle.getElementsByClass("meta-title");
+            crawlerAticle.setTitle(titlesBackupEles.first().attr("title"));
+            aticleUrl=titlesBackupEles.first().attr("href");
+        }
+        crawlerAticle.setReprintURL(aticleUrl);
         crawlerAticle.setDigest(digestAticle.getElementsByClass("excerpt").first().text());
         Elements aticleCategory=digestAticle.getElementsByAttributeValue("rel", "category tag");
         crawlerAticle.setAticleCategory(null == aticleCategory || aticleCategory.size()==0 ? "" : aticleCategory.first().text());
-        String aticleUrl = digestAticle.getElementsByClass("archive-title").first().attr("href");
-        crawlerAticle.setReprintURL(aticleUrl);
         crawlerAticle.setUpdateTime(MLifteDateUtils.getCurrentDate());
         Element aticleBodyEle = Jsoup.connect(aticleUrl).timeout(DEFAULT_TIMEOUT).get().body();
         crawlerAticle.setAticleContent(aticleBodyEle.getElementsByClass("entry").first().text());

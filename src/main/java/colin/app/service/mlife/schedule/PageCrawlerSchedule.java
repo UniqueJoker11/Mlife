@@ -51,9 +51,13 @@ public class PageCrawlerSchedule {
                 crawlerBaseParser.setUrl(crawlerURL.getUrl());
                 aticleLists.addAll(crawlerBaseParser.urlPageHandler());
                 ids.add(crawlerURL.getId());
-                crawlerAticleDao.addCrawlerAticles(aticleLists);
+                if(null!=aticleLists&&!aticleLists.isEmpty()){
+                    crawlerAticleDao.addCrawlerAticles(aticleLists);
+                }
                 //更新用戶的鏈接狀態
-                crawlerURLDao.updateCrawlerURL(ids);
+                if(null!=ids&&!ids.isEmpty()){
+                    crawlerURLDao.updateCrawlerURL(ids);
+                }
                 ids.clear();
                 aticleLists.clear();
                 log.info("爬取链接"+crawlerURL.getUrl()+"完毕！");

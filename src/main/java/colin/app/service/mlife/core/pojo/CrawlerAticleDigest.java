@@ -3,9 +3,11 @@ package colin.app.service.mlife.core.pojo;
 import java.io.Serializable;
 
 /**
- * Created by Administrator on 2016/8/22.
+ * Created by Administrator on 2016/8/27.
  */
-public class CrawlerAticle implements Serializable {
+public class CrawlerAticleDigest implements Serializable{
+    //文章ID
+    private String id;
     //博文标题
     private String title;
     //摘要
@@ -16,14 +18,20 @@ public class CrawlerAticle implements Serializable {
     private String tips;
     //文章分类
     private String aticleCategory;
-    //全文
-    private String aticleContent;
     //抓取时间
     private String updateTime;
     //转载链接
     private String reprintURL;
     //文章作者
     private String aticleAuthor;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -63,14 +71,6 @@ public class CrawlerAticle implements Serializable {
 
     public void setAticleCategory(String aticleCategory) {
         this.aticleCategory = aticleCategory;
-    }
-
-    public String getAticleContent() {
-        return aticleContent;
-    }
-
-    public void setAticleContent(String aticleContent) {
-        this.aticleContent = aticleContent;
     }
 
     public String getUpdateTime() {
