@@ -41,8 +41,8 @@ public class WebCrawlerController extends CommonController {
 
     /**
      * 获取爬取URL
-     * @param pageIndex
-     * @param pageSize
+     * @param start
+     * @param length
      * @return
      */
     @RequestMapping(value = "list_web_crawler",method = RequestMethod.POST)
