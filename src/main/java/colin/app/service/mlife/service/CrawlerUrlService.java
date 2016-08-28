@@ -19,4 +19,10 @@ public interface CrawlerUrlService {
      * @return
      */
     public ReturnCommonResult listCrawlerURLsByPage(int pageIndex,int pageSize);
+
+    /**
+     * 查询所有的URL
+     * @return
+     */
+    public ReturnCommonResult listAllCrawlerURL();
 }

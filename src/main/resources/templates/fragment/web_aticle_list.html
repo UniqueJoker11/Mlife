@@ -1,0 +1,67 @@
+<div class="row">
+    <%for(aticle in aticlesInfo["data"]){%>
+    <%if((aticleLP.index-1)%3==0&&aticleLP.index==1){%>
+    <div class="col-lg-4">
+        <%}else if((aticleLP.index-1)%3==0){%>
+    </div>
+    <div class="col-lg-4">
+        <%}%>
+        <div class="ibox">
+            <div class="ibox-content">
+                <a href="./article.html?id=${aticle.id}" class="btn-link">
+                    <h2>
+                        ${aticle.title}
+                    </h2>
+                </a>
+
+                <div class="small m-b-xs">
+                    <strong></strong> <span class="text-muted"><i class="fa fa-clock-o"></i>${aticle.updateTime}</span>
+                </div>
+                <a href="javascript:;" class="thumbnail">
+                    <img src="${aticle.digestSnapshot}" alt="缩略图">
+                </a>
+
+                <p>
+                    ${aticle.digest}
+                </p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>标签：</h5>
+                        <button class="btn btn-primary btn-xs" type="button">${aticle.tips}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</div>
+<div class="center-block text-center">
+    <nav>
+        <ul class="pagination">
+            <li>
+                <%if(aticlesInfo["hasPrev"]){%>
+                <a href="javascript:;" aria-label="Previous" onclick="loadAticleList(${aticlesInfo["current"]-1})">上一页</span></a>
+                <%}else{%>
+                <a href="javascript:;" aria-label="Previous" disabled="disabled">上一页</span></a>
+                <%}%>
+            </li>
+            <%for(var pageIndex=1;pageIndex<=aticlesInfo["total"];pageIndex++){%>
+            <%if(pageIndex==aticlesInfo["current"]){%>
+            <li class="active"><a href="javascript:;" onclick="loadAticleList(${pageIndex})">${pageIndex}</a></li>
+            <%}else{%>
+            <li><a href="javascript:;" onclick="loadAticleList(${pageIndex})">${pageIndex}</a></li>
+            <%}%>
+            <%}%>
+            <li>
+                <%if(aticlesInfo["hasNext"]){%>
+                <a href="javascript:;" aria-label="Next" onclick="loadAticleList(${aticlesInfo["current"]+1})">下一页</span></a>
+                <%}else{%>
+                <a href="javascript:;" aria-label="Next" disabled="disabled">下一页</span></a>
+                <%}%>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+

@@ -5,6 +5,8 @@ import colin.app.service.mlife.core.common.ReturnCommonResult;
 import colin.app.service.mlife.core.common.SystemConstants;
 import colin.app.service.mlife.core.dao.CrawlerURLDao;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
+import colin.app.service.mlife.core.utils.MLifteDateUtils;
+import colin.app.service.mlife.observer.CrawlerURLHandlerObserver;
 import colin.app.service.mlife.service.CrawlerUrlService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.time.DateFormatUtils;
@@ -13,19 +15,26 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Calendar;
-import java.util.List;
+import javax.annotation.PostConstruct;
+import java.util.*;
 
 /**
  * Created by joker on 16/8/21.
  */
 @Service
-public class CrawlerUrlServiceImpl implements CrawlerUrlService{
+public class CrawlerUrlServiceImpl extends Observable implements CrawlerUrlService{
     private final static Logger log= LoggerFactory.getLogger(CrawlerUrlServiceImpl.class);
 
     @Autowired
     private CrawlerURLDao crawlerURLDao;
 
+    @Autowired
+    private CrawlerURLHandlerObserver crawlerURLHandlerObserver;
+
+    @PostConstruct
+    public void initCrawlerObserver(){
+        this.addObserver(crawlerURLHandlerObserver);
+    }
     /**
      * 添加爬虫URL
      *
@@ -38,6 +47,8 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService{
             CrawlerURL crawlerURL=this.transferCrawler(crawlerUrlWrapper);
             crawlerURLDao.addCrawlerURL(crawlerURL);
             result=new ReturnCommonResult(true);
+            this.setChanged();
+            this.notifyObservers(crawlerURL);
         }catch (Exception e){
            log.error("添加爬取URL出错:{}",e);
             result=new ReturnCommonResult(false);
@@ -59,12 +70,18 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService{
             if(pageSize<0){
                 pageSize= SystemConstants.DEFAULT_PAGE_SIZE;
             }
+            Map<String,Object> result=new HashMap<String,Object>();
+            result.put("total",crawlerURLDao.countAllCrawlerURL());
             List<CrawlerURL> crawlerURLs=crawlerURLDao.findCrawlerURLByPage(pageIndex,pageSize);
-            commonResult=new ReturnCommonResult(true,crawlerURLs);
+            result.put("data",crawlerURLs);
+            commonResult=new ReturnCommonResult(true,result);
         }
         return commonResult;
     }
 
+    public ReturnCommonResult listAllCrawlerURL(){
+        return new ReturnCommonResult(true,crawlerURLDao.findAllCrawlerURL());
+    }
     /**
      * 转换包装类
      * @param crawlerUrlWrapper
@@ -73,7 +90,7 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService{
     private CrawlerURL transferCrawler(CrawlerUrlWrapper crawlerUrlWrapper){
         ObjectMapper mapper=new ObjectMapper();
         CrawlerURL crawlerURL=mapper.convertValue(crawlerUrlWrapper,CrawlerURL.class);
-        String initDate=DateFormatUtils.format(Calendar.getInstance().getTime(),"yyyy-MM-dd HH-mm-ss");
+        String initDate= MLifteDateUtils.getCurrentDate();
         crawlerURL.setCreateDate(initDate);
         crawlerURL.setUpdateDate(initDate);
         return crawlerURL;

@@ -8,7 +8,7 @@ public class CrawlerUrlWrapper {
     //链接描述
     private String urlDecription;
     //是否是根节点
-    private boolean isRootUrl;
+    private int isRootUrl;
     //页面解析器
     private String crawlerParser;
     //爬取状态
@@ -30,12 +30,12 @@ public class CrawlerUrlWrapper {
         this.urlDecription = urlDecription;
     }
 
-    public boolean isRootUrl() {
+    public int getIsRootUrl() {
         return isRootUrl;
     }
 
-    public void setRootUrl(boolean rootUrl) {
-        isRootUrl = rootUrl;
+    public void setIsRootUrl(int isRootUrl) {
+        this.isRootUrl = isRootUrl;
     }
 
     public String getCrawlerParser() {
