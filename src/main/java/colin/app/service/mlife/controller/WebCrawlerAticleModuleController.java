@@ -6,6 +6,7 @@ import colin.app.service.mlife.service.CrawlerAticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,10 +22,31 @@ public class WebCrawlerAticleModuleController extends CommonController {
     @Autowired
     private CrawlerAticleService crawlerAticleService;
 
+    /**
+     * 显示文章列表页
+     * @return
+     */
     @RequestMapping(value = "crawler_aticle",method = RequestMethod.GET)
     public ModelAndView showCrawlerAticlePage(){
         ModelAndView CrawlerAticlePageMV=new ModelAndView("web_aticle");
         return CrawlerAticlePageMV;
+    }
+
+    /**
+     * 显示文章详情页
+     * @return
+     */
+    @RequestMapping(value = "crawler_aticle_detail",method = RequestMethod.GET)
+    public ModelAndView showCrawlerAtcileDetailPage(@RequestParam String aid){
+        ModelAndView crawlerAticleDetailPageMv=new ModelAndView();
+        ReturnCommonResult result=crawlerAticleService.findCrawlerAticleDetail(aid);
+        if(!result.isSuccess()){
+            crawlerAticleDetailPageMv.setViewName("error/500");
+        }else{
+            crawlerAticleDetailPageMv.setViewName("web_aticle_detail");
+            crawlerAticleDetailPageMv.addObject("aticle",result.getData());
+        }
+        return crawlerAticleDetailPageMv;
     }
     /**
      * 获取爬取文章列表

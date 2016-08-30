@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Created by Administrator on 2016/8/22.
  */
 public class CrawlerAticle implements Serializable {
+    private String id;
     //博文标题
     private String title;
     //摘要
@@ -24,6 +25,14 @@ public class CrawlerAticle implements Serializable {
     private String reprintURL;
     //文章作者
     private String aticleAuthor;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
