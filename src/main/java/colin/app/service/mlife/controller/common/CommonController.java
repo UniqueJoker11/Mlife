@@ -3,6 +3,7 @@ package colin.app.service.mlife.controller.common;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -44,5 +45,14 @@ public class CommonController {
 
     public void setHttpSession(HttpSession httpSession) {
         this.httpSession = httpSession;
+    }
+    public ModelAndView returnCommonMv(String template){
+        ModelAndView commonView=new ModelAndView(template);
+        return commonView;
+    }
+    public ModelAndView returnCommonMv(String template,String key,Object obj){
+        ModelAndView commonView=new ModelAndView(template);
+        commonView.addObject(key,obj);
+        return commonView;
     }
 }
