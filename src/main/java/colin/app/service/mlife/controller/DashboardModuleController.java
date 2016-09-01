@@ -17,36 +17,77 @@ public class DashboardModuleController extends CommonController {
 
     /**
      * 显示主面板
+     *
      * @param httpSession
      * @return
      */
-    @RequestMapping(value = "dashboard",method = RequestMethod.GET )
-    public ModelAndView showDashboard(HttpSession httpSession){
-        ModelAndView dashView=new ModelAndView("dashboard");
+    @RequestMapping(value = "dashboard", method = RequestMethod.GET)
+    public ModelAndView showDashboard(HttpSession httpSession) {
+        ModelAndView dashView = new ModelAndView("dashboard");
         return dashView;
     }
 
     /**
      * 显示主页
+     *
      * @return
      * @throws Exception
      */
-    @RequestMapping(value = "index",method = RequestMethod.GET)
+    @RequestMapping(value = "index", method = RequestMethod.GET)
     public ModelAndView showIndex() throws Exception {
-        ModelAndView indexView=new ModelAndView("index");
+        ModelAndView indexView = new ModelAndView("index");
         return indexView;
     }
+
+    /**
+     * 显示修改头像主页
+     *
+     * @return
+     */
+    @RequestMapping(value = "user_avatar", method = RequestMethod.GET)
+    public ModelAndView showAvatar() {
+        return super.returnCommonMv("admin_avatar");
+    }
+
+    /**
+     * 个人资料页
+     * @return
+     */
+    @RequestMapping(value = "user_profile",method = RequestMethod.GET)
+    public ModelAndView showProfile(){
+        return super.returnCommonMv("admin_profile");
+    }
+
+    /**
+     * 显示联系页
+     * @return
+     */
+    @RequestMapping(value = "admin_contacts",method = RequestMethod.GET)
+    public ModelAndView showContacts(){
+        return super.returnCommonMv("admin_contacts");
+    }
+
+    /**
+     * 访问用户的邮箱
+     * @return
+     */
+    @RequestMapping(value = "admin_mailbox",method = RequestMethod.GET)
+    public ModelAndView showMailbox(){
+        return super.returnCommonMv("admin_mailbox");
+    }
+
     /**
      * 用户注销
+     *
      * @param username
      * @return
      */
-    @RequestMapping(value = "logout",method = RequestMethod.GET)
-    public ModelAndView adminLogout(String username){
-        if(null!=super.getHttpSession().getAttribute(username)){
+    @RequestMapping(value = "logout", method = RequestMethod.GET)
+    public ModelAndView adminLogout(String username) {
+        if (null != super.getHttpSession().getAttribute(username)) {
             super.getHttpSession().removeAttribute(username);
         }
-        ModelAndView logoutView=new ModelAndView();
+        ModelAndView logoutView = new ModelAndView();
         logoutView.setViewName("redirect:login");
         return logoutView;
     }
