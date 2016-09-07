@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 数据表格</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+    <link rel="shortcut icon" href="favicon.ico" tppabs="http://www.zi-han.net/theme/hplus/favicon.ico">
+    <link href="${ctxPath}/css/bootstrap.min.css-v=3.3.5.css"
+          tppabs="http://www.zi-han.net/theme/hplus/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="${ctxPath}/css/font-awesome.min.css-v=4.4.0.css"
+          tppabs="http://www.zi-han.net/theme/hplus/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="${ctxPath}/css/plugins/sweetalert/sweetalert.css" tppabs="http://www.zi-han.net/theme/hplus/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="${ctxPath}/css/plugins/dataTables/dataTables.bootstrap.min.css" rel="stylesheet">
+
+    <link href="${ctxPath}/css/animate.min.css" rel="stylesheet">
+    <link href="${ctxPath}/css/style.min.css-v=4.0.0.css" rel="stylesheet">
+    <base target="_self">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>添加论坛版块</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="get" class="form-horizontal" id="addForumForm">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">版块名称</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="add_name" name="name">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">版块分类</label>
+
+                            <div class="col-sm-10">
+                                <select class="form-control m-b" id="add_category" name="category">
+                                    <option value="1">主版块</option>
+                                    <option value="2">副版块</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">版块图标</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="add_icon" name="icon">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">版块简介</label>
+
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="add_digest" name="digest"></textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <button class="btn btn-primary col-sm-offset-5 col-sm-3" type="button"
+                                    onclick="submitForumInfo()">提交
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>论坛版块一览</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#"
+                           tppabs="http://www.zi-han.net/theme/hplus/table_data_tables.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="table_data_tables.html#"
+                                   tppabs="http://www.zi-han.net/theme/hplus/table_data_tables.html#">选项1</a>
+                            </li>
+                            <li><a href="table_data_tables.html#"
+                                   tppabs="http://www.zi-han.net/theme/hplus/table_data_tables.html#">选项2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+                    <table class="table table-striped table-bordered table-hover dataTables-example" id="editable">
+                        <thead>
+                        <tr>
+                            <th>选择</th>
+                            <th>版块名称</th>
+                            <th>版块图标</th>
+                            <th>版块简介</th>
+                            <th>版块分类</th>
+                            <th>创建时间</th>
+                            <th>浏览数量</th>
+                            <th>帖子数量</th>
+                            <th>话题数量</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>选择</th>
+                            <th>版块名称</th>
+                            <th>版块图标</th>
+                            <th>版块分类</th>
+                            <th>创建时间</th>
+                            <th>创建人</th>
+                            <th>浏览数量</th>
+                            <th>帖子数量</th>
+                            <th>话题数量</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--编辑行数据-->
+<div class="modal inmodal" id="addCrawlerDataModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">关闭</span>
+                </button>
+                <h4 class="modal-title">编辑论坛版块</h4>
+            </div>
+            <div class="modal-body">
+                <form method="get" class="form-horizontal" id="editForumForm">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">版块名称</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit_name" name="name" required>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">版块分类</label>
+
+                        <div class="col-sm-10">
+                            <select class="form-control m-b" id="edit_category" name="category">
+                                <option value="1">主版块</option>
+                                <option value="2">副版块</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">版块图标</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="edit_icon" name="icon" required>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">版块简介</label>
+
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="digest" id="edit_digest" required></textarea>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <button class="btn btn-primary col-sm-offset-5 col-sm-3" type="submit"
+                                onclick="submitForumInfo()">
+                            <strong>提交</strong>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                <button type="submit" class="btn btn-primary" onclick="fnClickAddRow()">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="${ctxPath}/js/jquery.min.js-v=2.1.4.js"></script>
+<script src="${ctxPath}/js/bootstrap.min.js-v=3.3.5.js"></script>
+<script src="${ctxPath}/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="${ctxPath}/js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="${ctxPath}/js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="${ctxPath}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script src="${ctxPath}/js/content.min.js-v=1.0.0.js"></script>
+<script>
+    var oTable =null;
+    $(document).ready(function () {
+        oTable=$("#editable").dataTable({
+            "autoWidth": true,
+            language: {
+                url: '/i18n/dataTable/chinese.json'
+            },
+            "processing": true,
+            "serverSide": true,
+            ajax: {
+                "url": "list_web_forum",
+                "type": "POST"
+            },
+            columns: [
+                {
+                    data: "id", render: function (data, type, full, meta) {
+                    return "<input type='checkbox' data-id='" + data + "'/>";
+                }
+                },
+                {data: 'name'},
+                {data: 'icon'},
+                {data: "digest"},
+                {
+                    data: 'category', render: function (data, type, full, meta) {
+                    if (data == 1) {
+                        return "主版块";
+                    } else if (data == 2) {
+                        return "副版块";
+                    }
+                }
+                },
+                {data: 'createTime'},
+                {data: 'browserNum'},
+                {data: "themeNum"},
+                {data: "topicNum"}
+            ]
+        });
+    });
+
+    var dataTableUtils = function () {
+        this.combineDataTable = function (data) {
+            var result = new Array();
+
+        }
+    }
+    var loadingTemplate = "<div class=\"sk-spinner sk-spinner-wave\">" +
+            "<div class=\"sk-rect1\"></div>" +
+            "<div class=\"sk-rect2\"></div>" +
+            "<div class=\"sk-rect3\"></div>" +
+            "<div class=\"sk-rect4\"></div>" +
+            "<div class=\"sk-rect5\"></div>" +
+            "</div>";
+
+    var btnLoadingTemplate = "<i class=\"fa fa-refresh fa-spin fa-3x fa-fw\"></i>" +
+            "<span class=\"sr-only\">提交中...</span>";
+
+    //添加论坛内容
+    function submitForumInfo() {
+        var target = event.target;
+        var forumTools = new ForumTools();
+        $.ajax({
+            url: 'add_forum',
+            type: "post",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(forumTools.initParam()),
+            beforeSend: function (xhr) {
+                $(target).valueOf(btnLoadingTemplate).attr("disabled", "disabled");
+            },
+            complete: function (xhr, data) {
+                $(target).valueOf("提交").removeAttr("disabled");
+            },
+            success: function (data) {
+                if(data.success){
+                    oTable.draw();
+                }else{
+                    swal("添加论坛版块提示", "无法添加论坛版块,请稍后再试!", "确定");
+                }
+            }
+
+        });
+        return false;
+    }
+    ;
+    var ForumTools = function () {
+        this.initParam = function () {
+            var forumWrapper = new Object();
+            forumWrapper.icon = $("#add_icon").val();
+            forumWrapper.name = $("#add_name").val();
+            forumWrapper.digest = $("#add_digest").val();
+            forumWrapper.category = $("#add_category").val();
+            return forumWrapper;
+        }
+    }
+</script>
+</body>
+
+</html>

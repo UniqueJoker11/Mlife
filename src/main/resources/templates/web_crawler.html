@@ -16,7 +16,7 @@
           tppabs="http://www.zi-han.net/theme/hplus/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
     <link href="${ctxPath}/css/font-awesome.min.css-v=4.4.0.css"
           tppabs="http://www.zi-han.net/theme/hplus/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-
+    <link href="${ctxPath}/css/plugins/sweetalert/sweetalert.css" tppabs="http://www.zi-han.net/theme/hplus/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
     <!-- Data Tables -->
     <link href="${ctxPath}/css/plugins/dataTables/dataTables.bootstrap.min.css" rel="stylesheet">
 
@@ -32,7 +32,7 @@
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>可编辑表格</h5>
+                    <h5>Web爬虫链接管理</h5>
 
                     <div class="ibox-tools">
                         <a class="collapse-link">
@@ -63,7 +63,7 @@
                     <table class="table table-striped table-bordered table-hover dataTables-example" id="editable">
                         <thead>
                         <tr>
-                            <th style="display: none"></th>
+                            <th>选择</th>
                             <th>URL</th>
                             <th>描述</th>
                             <th style="display: none"></th>
@@ -78,16 +78,18 @@
 
 
                         </tbody>
-                        <!-- <tfoot>
-                         <tr>
-                             <th style="display: none"></th>
-                             <th>URL</th>
-                             <th>描述</th>
-                             <th>根节点</th>
-                             <th>解析器</th>
-                             <th>爬取状态</th>
-                         </tr>
-                         </tfoot>-->
+                        <tfoot>
+                        <th>选择</th>
+                        <th>URL</th>
+                        <th>描述</th>
+                        <th style="display: none"></th>
+                        <th>根节点</th>
+                        <th>解析器</th>
+                        <th>爬取状态</th>
+                        <th style="display: none"></th>
+                        <th style="display: none"></th>
+                        </tr>
+                        </tfoot>
                     </table>
 
                 </div>
@@ -236,6 +238,7 @@
 </div>
 <script src="${ctxPath}/js/jquery.min.js-v=2.1.4.js"></script>
 <script src="${ctxPath}/js/bootstrap.min.js-v=3.3.5.js"></script>
+<script src="${ctxPath}/js/plugins/sweetalert/sweetalert.min.js"></script>
 <script src="${ctxPath}/js/plugins/jeditable/jquery.jeditable.js"></script>
 <script src="${ctxPath}/js/plugins/dataTables/jquery.dataTables.js"></script>
 <script src="${ctxPath}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
@@ -254,7 +257,11 @@
                 "type": "POST"
             },
             columns: [
-                {data: "id", "visible": false},
+                {
+                    data: "id", render: function (data, type, full, meta) {
+                    return "<input type='checkbox' data-id='" + data + "'/>";
+                }
+                },
                 {data: 'url'},
                 {data: 'urlDecription'},
                 {data: "parentUrl", "visible": false},

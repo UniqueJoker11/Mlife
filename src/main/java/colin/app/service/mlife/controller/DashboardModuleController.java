@@ -33,10 +33,10 @@ public class DashboardModuleController extends CommonController {
      * @return
      * @throws Exception
      */
-    @RequestMapping(value = "index", method = RequestMethod.GET)
+    @RequestMapping(value = "main", method = RequestMethod.GET)
     public ModelAndView showIndex() throws Exception {
-        ModelAndView indexView = new ModelAndView("index");
-        return indexView;
+        ModelAndView mainView = new ModelAndView("main");
+        return mainView;
     }
 
     /**
@@ -44,7 +44,7 @@ public class DashboardModuleController extends CommonController {
      *
      * @return
      */
-    @RequestMapping(value = "user_avatar", method = RequestMethod.GET)
+    @RequestMapping(value = "admin_avatar", method = RequestMethod.GET)
     public ModelAndView showAvatar() {
         return super.returnCommonMv("admin_avatar");
     }
@@ -53,7 +53,7 @@ public class DashboardModuleController extends CommonController {
      * 个人资料页
      * @return
      */
-    @RequestMapping(value = "user_profile",method = RequestMethod.GET)
+    @RequestMapping(value = "admin_profile",method = RequestMethod.GET)
     public ModelAndView showProfile(){
         return super.returnCommonMv("admin_profile");
     }

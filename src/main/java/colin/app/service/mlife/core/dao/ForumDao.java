@@ -61,4 +61,26 @@ public class ForumDao {
         List<Forum> forums=mongoTemplate.find(topForums,Forum.class,FORUM_COLLECTION);
         return forums;
     }
+
+    /**
+     * 统计所有论坛版块数量
+     * @return
+     */
+    public long countAllForum(){
+       return mongoTemplate.count(null,FORUM_COLLECTION);
+    }
+
+    /**
+     * 查询所有的论坛版块
+     * @return
+     */
+    public List<Forum> findAllForum(){
+        return mongoTemplate.findAll(Forum.class,FORUM_COLLECTION);
+    }
+
+    public List<Forum> findForumByPage(int pageIndex,int dataSize){
+        Query forumQuery=Query.query(new Criteria()).skip((pageIndex-1)*dataSize).limit(dataSize);
+        List<Forum> forums=mongoTemplate.find(forumQuery,Forum.class,FORUM_COLLECTION);
+        return forums;
+    }
 }

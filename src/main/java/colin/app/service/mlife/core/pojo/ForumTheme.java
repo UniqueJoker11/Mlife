@@ -13,7 +13,7 @@ public class ForumTheme {
     private String themeAuthor;
     private String themeTitle;
     private String themeDescribe;
-    private String themeContent;
+    private String themeCreateTime;
 
     public String getId() {
         return id;
@@ -55,11 +55,11 @@ public class ForumTheme {
         this.themeDescribe = themeDescribe;
     }
 
-    public String getThemeContent() {
-        return themeContent;
+    public String getThemeCreateTime() {
+        return themeCreateTime;
     }
 
-    public void setThemeContent(String themeContent) {
-        this.themeContent = themeContent;
+    public void setThemeCreateTime(String themeCreateTime) {
+        this.themeCreateTime = themeCreateTime;
     }
 }

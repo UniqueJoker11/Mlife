@@ -73,4 +73,32 @@ public class CommonAsyncController {
         }
     }
 
+    /**
+     * 返回ajax对象内容
+     * @param obj
+     * @return
+     */
+    public WebAsyncTask<Object> callableAjaxObj(Object obj) {
+        WebAsyncTask<Object> asyncTask = new WebAsyncTask<Object>(this.DEFAULT_TIMEOUT, new AjaxObjCallable(obj));
+        return asyncTask;
+    }
+
+    private class AjaxObjCallable implements Callable<Object>{
+
+        private Object obj;
+        public AjaxObjCallable(Object obj){
+            this.obj=obj;
+        }
+        /**
+         * Computes a result, or throws an exception if unable to do so.
+         *
+         * @return computed result
+         * @throws Exception if unable to compute a result
+         */
+        @Override
+        public Object call() throws Exception {
+            return obj;
+        }
+    }
+
 }

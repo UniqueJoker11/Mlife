@@ -9,8 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Forum {
     private String id;
+    private String icon;
     private String name;
-    private boolean isTop;
+    private String digest;
+    //板块分类 1:主版块 2:副版块
+    private int category;
+    //浏览数量
     private long browserNum;
     private String createTime;
     //话题个数
@@ -34,12 +38,12 @@ public class Forum {
         this.name = name;
     }
 
-    public boolean isTop() {
-        return isTop;
+    public int getCategory() {
+        return category;
     }
 
-    public void setTop(boolean isTop) {
-        this.isTop = isTop;
+    public void setCategory(int category) {
+        this.category = category;
     }
 
     public long getBrowserNum() {
@@ -72,5 +76,21 @@ public class Forum {
 
     public void setTopicNum(long topicNum) {
         this.topicNum = topicNum;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getDigest() {
+        return digest;
+    }
+
+    public void setDigest(String digest) {
+        this.digest = digest;
     }
 }
