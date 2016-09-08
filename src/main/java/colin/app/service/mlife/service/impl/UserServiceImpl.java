@@ -7,8 +7,6 @@ import colin.app.service.mlife.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Observable;
-
 /**
  * Created by Administrator on 2016/8/18.
  */

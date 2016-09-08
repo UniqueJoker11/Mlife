@@ -48,19 +48,28 @@ public class PageCrawlerSchedule {
             for(CrawlerURL crawlerURL:crawlerURLList){
                 Class crawlerClass=classLoader.loadClass(crawlerURL.getCrawlerParser());
                 CrawlerBaseParser<CrawlerAticle> crawlerBaseParser=(CrawlerBaseParser)crawlerClass.newInstance();
-                crawlerBaseParser.setUrl(crawlerURL.getUrl());
-                aticleLists.addAll(crawlerBaseParser.urlPageHandler());
-                ids.add(crawlerURL.getId());
-                if(null!=aticleLists&&!aticleLists.isEmpty()){
-                    crawlerAticleDao.addCrawlerAticles(aticleLists);
+                if(null!=crawlerBaseParser){
+                    crawlerBaseParser.setUrl(crawlerURL.getUrl());
+                    //更新用戶的鏈接狀態
+                    if(null!=ids&&!ids.isEmpty()){
+                        crawlerURLDao.updateCrawlerURL(ids);
+                    }
+                    List<CrawlerAticle> urlAticleResult=crawlerBaseParser.urlPageHandler();
+                    if(null!=urlAticleResult){
+                        aticleLists.addAll(urlAticleResult);
+                    }
+                    String urlIds=crawlerURL.getId();
+                    if(null!=urlIds){
+                        ids.add(urlIds);
+                    }
+                    if(null!=aticleLists&&!aticleLists.isEmpty()){
+                        crawlerAticleDao.addCrawlerAticles(aticleLists);
+                    }
+                    ids.clear();
+                    aticleLists.clear();
+                    log.info("爬取链接"+crawlerURL.getUrl()+"完毕！");
                 }
-                //更新用戶的鏈接狀態
-                if(null!=ids&&!ids.isEmpty()){
-                    crawlerURLDao.updateCrawlerURL(ids);
-                }
-                ids.clear();
-                aticleLists.clear();
-                log.info("爬取链接"+crawlerURL.getUrl()+"完毕！");
+
             }
 
         }

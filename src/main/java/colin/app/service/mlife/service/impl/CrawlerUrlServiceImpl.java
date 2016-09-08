@@ -3,20 +3,21 @@ package colin.app.service.mlife.service.impl;
 import colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper;
 import colin.app.service.mlife.core.common.ReturnCommonResult;
 import colin.app.service.mlife.core.common.SystemConstants;
+import colin.app.service.mlife.core.convert.CrawlerUrlConvert;
 import colin.app.service.mlife.core.dao.CrawlerURLDao;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
-import colin.app.service.mlife.core.utils.MLifteDateUtils;
 import colin.app.service.mlife.observer.CrawlerURLHandlerObserver;
 import colin.app.service.mlife.service.CrawlerUrlService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.lang3.time.DateFormatUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Observable;
 
 /**
  * Created by joker on 16/8/21.
@@ -25,6 +26,8 @@ import java.util.*;
 public class CrawlerUrlServiceImpl extends Observable implements CrawlerUrlService{
     private final static Logger log= LoggerFactory.getLogger(CrawlerUrlServiceImpl.class);
 
+    @Autowired
+    private CrawlerUrlConvert crawlerUrlConvert;
     @Autowired
     private CrawlerURLDao crawlerURLDao;
 
@@ -44,7 +47,7 @@ public class CrawlerUrlServiceImpl extends Observable implements CrawlerUrlServi
     public ReturnCommonResult addCrawlerURL(CrawlerUrlWrapper crawlerUrlWrapper) {
         ReturnCommonResult result=null;
         try {
-            CrawlerURL crawlerURL=this.transferCrawler(crawlerUrlWrapper);
+            CrawlerURL crawlerURL=crawlerUrlConvert.initCrawlerURL(crawlerUrlWrapper);
             crawlerURLDao.addCrawlerURL(crawlerURL);
             result=new ReturnCommonResult(true);
             this.setChanged();
@@ -81,19 +84,6 @@ public class CrawlerUrlServiceImpl extends Observable implements CrawlerUrlServi
 
     public ReturnCommonResult listAllCrawlerURL(){
         return new ReturnCommonResult(true,crawlerURLDao.findAllCrawlerURL());
-    }
-    /**
-     * 转换包装类
-     * @param crawlerUrlWrapper
-     * @return
-     */
-    private CrawlerURL transferCrawler(CrawlerUrlWrapper crawlerUrlWrapper){
-        ObjectMapper mapper=new ObjectMapper();
-        CrawlerURL crawlerURL=mapper.convertValue(crawlerUrlWrapper,CrawlerURL.class);
-        String initDate= MLifteDateUtils.getCurrentDate();
-        crawlerURL.setCreateDate(initDate);
-        crawlerURL.setUpdateDate(initDate);
-        return crawlerURL;
     }
 
 }
