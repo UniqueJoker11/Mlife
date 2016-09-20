@@ -473,3 +473,84 @@ java.lang.IllegalStateException: DEAD LOCK: IoFuture.await() was invoked from an
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
+2016-09-20 14:19:16 [colin.app.service.mlife.config.handler.WebChatHandler:43] - 处理收到的传输消息：
+java.lang.IllegalArgumentException: Cannot send message after connection closed.
+	at org.springframework.util.Assert.isTrue(Assert.java:68)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:98)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:160)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:87)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:101)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:827)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-20 14:22:25 [colin.app.service.mlife.config.handler.WebChatHandler:43] - 处理收到的传输消息：
+java.lang.IllegalArgumentException: Cannot send message after connection closed.
+	at org.springframework.util.Assert.isTrue(Assert.java:68)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:98)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:160)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:87)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:101)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:827)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-20 14:22:34 [colin.app.service.mlife.config.handler.WebChatHandler:43] - 处理收到的传输消息：
+java.lang.IllegalArgumentException: Cannot send message after connection closed.
+	at org.springframework.util.Assert.isTrue(Assert.java:68)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:98)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:160)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:87)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:101)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:827)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-20 14:27:30 [colin.app.service.mlife.config.handler.WebChatHandler:43] - 处理收到的传输消息：
+java.lang.IllegalArgumentException: Cannot send message after connection closed.
+	at org.springframework.util.Assert.isTrue(Assert.java:68)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:98)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:160)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:87)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:101)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:827)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-20 14:28:49 [colin.app.service.mlife.config.handler.WebChatHandler:43] - 处理收到的异常消息：
+java.lang.IllegalArgumentException: Cannot send message after connection closed.
+	at org.springframework.util.Assert.isTrue(Assert.java:68)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:98)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:160)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:87)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:101)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:827)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-20 15:04:38 [colin.app.service.mlife.config.manager.WebChatManager:71] - 参数不合法，username：true|session：false
+2016-09-20 15:04:38 [colin.app.service.mlife.config.manager.WebChatManager:28] - 因为参数校验不合法，初始化session失败
+2016-09-20 15:06:35 [colin.app.service.mlife.config.manager.WebChatManager:71] - 参数不合法，username：true|session：false
+2016-09-20 15:06:35 [colin.app.service.mlife.config.manager.WebChatManager:28] - 因为参数校验不合法，初始化session失败
+2016-09-20 15:22:30 [colin.app.service.mlife.config.manager.WebChatManager:71] - 参数不合法，username：true|session：false
+2016-09-20 15:22:30 [colin.app.service.mlife.config.manager.WebChatManager:28] - 因为参数校验不合法，初始化session失败
