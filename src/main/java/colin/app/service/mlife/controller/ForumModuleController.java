@@ -73,19 +73,33 @@ public class ForumModuleController extends CommonController {
 
     /**
      * 显示论坛主题管理页面
+     *
      * @return
      */
-    @RequestMapping(value = "web_forum_theme",method = RequestMethod.GET)
-    public ModelAndView showForumTheme(){
+    @RequestMapping(value = "web_forum_theme", method = RequestMethod.GET)
+    public ModelAndView showForumTheme() {
         return super.returnCommonMv("web_forum_theme");
     }
 
     /**
-     * 显示论坛帖子管理页面
+     * 获取所有的论坛版块内容
+     *
      * @return
      */
-    @RequestMapping(value = "web_forum_topic",method = RequestMethod.GET)
-    public ModelAndView showForumTopic(){
+    @ResponseBody
+    @RequestMapping(value = "find_all_forum", method = RequestMethod.POST)
+    public Object getAllForum() {
+        ReturnCommonResult result = forumService.findAllForum();
+        return result;
+    }
+
+    /**
+     * 显示论坛帖子管理页面
+     *
+     * @return
+     */
+    @RequestMapping(value = "web_forum_topic", method = RequestMethod.GET)
+    public ModelAndView showForumTopic() {
         return super.returnCommonMv("web_forum_topic");
     }
 

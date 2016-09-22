@@ -20,4 +20,5 @@ public interface ForumThemeService {
      * @return
      */
     public ReturnCommonResult findForumThemeByPage(int pageIndex,int dataSize);
+
 }

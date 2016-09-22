@@ -20,9 +20,10 @@
           tppabs="http://www.zi-han.net/theme/hplus/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
     <!-- Data Tables -->
     <link href="${ctxPath}/css/plugins/dataTables/dataTables.bootstrap.min.css" rel="stylesheet">
-
+    <link href="${ctxPath}/css/plugins/chosen/chosen.css" rel="stylesheet">
     <link href="${ctxPath}/css/animate.min.css" rel="stylesheet">
     <link href="${ctxPath}/css/style.min.css-v=4.0.0.css" rel="stylesheet">
+
     <base target="_self">
 
 </head>
@@ -34,6 +35,7 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>添加论坛版块</h5>
+
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -47,13 +49,16 @@
                     <form method="get" class="form-horizontal" id="addForumForm">
                         <div class="form-group">
                             <label class="col-sm-2 control-label">话题版块</label>
-
                             <div class="col-sm-10">
-                                <select class="form-control m-b" id="add_category" name="category">
-                                    <option value="1">主版块</option>
-                                    <option value="2">副版块</option>
-                                </select>
-                            </div>
+                                    <select data-placeholder="选择所属板块..." class="chosen-select form-control m-b">
+                                        <option value="">选择所属板块</option>
+
+                                    </select>
+                                </div>
+                            <!-- <select class="form-control m-b" id="add_category" name="category">
+                                 <option value="1">主版块</option>
+                                 <option value="2">副版块</option>
+                             </select>-->
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">话题名称</label>
@@ -86,6 +91,7 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>论坛版块一览</h5>
+
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -170,6 +176,7 @@
                     <div class="hr-line-dashed"></div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">版块图标</label>
+
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="edit_icon" name="icon" required>
                         </div>
@@ -200,6 +207,7 @@
 </div>
 <script src="${ctxPath}/js/jquery.min.js-v=2.1.4.js"></script>
 <script src="${ctxPath}/js/bootstrap.min.js-v=3.3.5.js"></script>
+<script src="${ctxPath}/js/plugins/chosen/chosen.jquery.js"></script>
 <script src="${ctxPath}/js/plugins/sweetalert/sweetalert.min.js"></script>
 <script src="${ctxPath}/js/plugins/jeditable/jquery.jeditable.js"></script>
 <script src="${ctxPath}/js/plugins/dataTables/jquery.dataTables.js"></script>
@@ -208,41 +216,51 @@
 <script>
     var oTable = null;
     $(document).ready(function () {
-        oTable = $("#editable").dataTable({
-            "autoWidth": true,
-            language: {
-                url: '/i18n/dataTable/chinese.json'
-            },
-            "processing": true,
-            "serverSide": true,
-            ajax: {
-                "url": "list_web_forum",
-                "type": "POST"
-            },
-            columns: [
-                {
-                    data: "id", render: function (data, type, full, meta) {
-                    return "<input type='checkbox' data-id='" + data + "'/>";
-                }
-                },
-                {data: 'name'},
-                {data: 'icon'},
-                {data: "digest"},
-                {
-                    data: 'category', render: function (data, type, full, meta) {
-                    if (data == 1) {
-                        return "主版块";
-                    } else if (data == 2) {
-                        return "副版块";
-                    }
-                }
-                },
-                {data: 'createTime'},
-                {data: 'browserNum'},
-                {data: "themeNum"},
-                {data: "topicNum"}
-            ]
-        });
+        var config = {
+            ".chosen-select": {},
+            ".chosen-select-deselect": {allow_single_deselect: !0},
+            ".chosen-select-no-single": {disable_search_threshold: 10},
+            ".chosen-select-no-results": {no_results_text: "Oops, nothing found!"},
+            ".chosen-select-width": {width: "95%"}
+        };
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+        /*  oTable = $("#editable").dataTable({
+         "autoWidth": true,
+         language: {
+         url: '/i18n/dataTable/chinese.json'
+         },
+         "processing": true,
+         "serverSide": true,
+         ajax: {
+         "url": "list_web_forum",
+         "type": "POST"
+         },
+         columns: [
+         {
+         data: "id", render: function (data, type, full, meta) {
+         return "<input type='checkbox' data-id='" + data + "'/>";
+         }
+         },
+         {data: 'name'},
+         {data: 'icon'},
+         {data: "digest"},
+         {
+         data: 'category', render: function (data, type, full, meta) {
+         if (data == 1) {
+         return "主版块";
+         } else if (data == 2) {
+         return "副版块";
+         }
+         }
+         },
+         {data: 'createTime'},
+         {data: 'browserNum'},
+         {data: "themeNum"},
+         {data: "topicNum"}
+         ]
+         });*/
     });
     var dataTableUtils = function () {
         this.combineDataTable = function (data) {
