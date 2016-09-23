@@ -6,6 +6,7 @@ import colin.app.service.mlife.controller.wrapper.ForumWrapper;
 import colin.app.service.mlife.core.common.ReturnCommonResult;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
 import colin.app.service.mlife.core.pojo.Forum;
+import colin.app.service.mlife.core.utils.LogUtils;
 import colin.app.service.mlife.service.ForumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,9 @@ public class ForumModuleController extends CommonController {
 
     @Autowired
     private ForumService forumService;
+
+    @Autowired
+    private LogUtils logUtils;
 
     private static final AtomicLong requestTimes = new AtomicLong(0);
 
@@ -78,7 +82,15 @@ public class ForumModuleController extends CommonController {
      */
     @RequestMapping(value = "web_forum_theme", method = RequestMethod.GET)
     public ModelAndView showForumTheme() {
-        return super.returnCommonMv("web_forum_theme");
+
+        ReturnCommonResult result = forumService.findAllForum();
+        logUtils.info(ForumModuleController.class, "===============" + result.isSuccess() + "===" + result.getData());
+        if (result.isSuccess()) {
+            return super.returnCommonMv("web_forum_theme", "forumList", result.getData());
+        } else {
+            return super.returnCommonMv("web_forum_theme");
+        }
+
     }
 
     /**
