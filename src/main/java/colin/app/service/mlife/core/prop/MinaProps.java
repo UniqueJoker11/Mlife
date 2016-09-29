@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 /**
  * Created by joker on 16/9/15.
  */
-@ConfigurationProperties(prefix = "mina")
 @Component
+@ConfigurationProperties(prefix = "mina")
 public class MinaProps {
     private int tcpPort;
     private int udpPort;
