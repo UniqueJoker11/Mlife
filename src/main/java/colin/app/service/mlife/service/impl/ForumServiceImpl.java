@@ -9,8 +9,10 @@ import colin.app.service.mlife.core.pojo.Forum;
 import colin.app.service.mlife.service.ForumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -56,6 +58,20 @@ public class ForumServiceImpl implements ForumService{
             resultMap.put("data",forumDao.findForumByPage(pageIndex,dataSize));
             return  new ReturnCommonResult(true,resultMap);
         }
+    }
+
+    /**
+     * 查询所有的论坛版块
+     *
+     * @return
+     */
+    @Override
+    public ReturnCommonResult findAllForum() {
+        List<Forum> forumList=forumDao.findAllForum();
+        if (ObjectUtils.isEmpty(forumList)){
+            return new ReturnCommonResult(false);
+        }
+        return new ReturnCommonResult(true,forumList);
     }
 
 }

@@ -6,6 +6,7 @@ import colin.app.service.mlife.controller.wrapper.ForumWrapper;
 import colin.app.service.mlife.core.common.ReturnCommonResult;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
 import colin.app.service.mlife.core.pojo.Forum;
+import colin.app.service.mlife.core.utils.LogUtils;
 import colin.app.service.mlife.service.ForumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,9 @@ public class ForumModuleController extends CommonController {
 
     @Autowired
     private ForumService forumService;
+
+    @Autowired
+    private LogUtils logUtils;
 
     private static final AtomicLong requestTimes = new AtomicLong(0);
 
@@ -73,19 +77,41 @@ public class ForumModuleController extends CommonController {
 
     /**
      * 显示论坛主题管理页面
+     *
      * @return
      */
-    @RequestMapping(value = "web_forum_theme",method = RequestMethod.GET)
-    public ModelAndView showForumTheme(){
-        return super.returnCommonMv("web_forum_theme");
+    @RequestMapping(value = "web_forum_theme", method = RequestMethod.GET)
+    public ModelAndView showForumTheme() {
+
+        ReturnCommonResult result = forumService.findAllForum();
+        logUtils.info(ForumModuleController.class, "===============" + result.isSuccess() + "===" + result.getData());
+        if (result.isSuccess()) {
+            return super.returnCommonMv("web_forum_theme", "forumList", result.getData());
+        } else {
+            return super.returnCommonMv("web_forum_theme");
+        }
+
+    }
+
+    /**
+     * 获取所有的论坛版块内容
+     *
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "find_all_forum", method = RequestMethod.POST)
+    public Object getAllForum() {
+        ReturnCommonResult result = forumService.findAllForum();
+        return result;
     }
 
     /**
      * 显示论坛帖子管理页面
+     *
      * @return
      */
-    @RequestMapping(value = "web_forum_topic",method = RequestMethod.GET)
-    public ModelAndView showForumTopic(){
+    @RequestMapping(value = "web_forum_topic", method = RequestMethod.GET)
+    public ModelAndView showForumTopic() {
         return super.returnCommonMv("web_forum_topic");
     }
 

@@ -78,6 +78,12 @@ public class ForumDao {
         return mongoTemplate.findAll(Forum.class,FORUM_COLLECTION);
     }
 
+    /**
+     * 分页查询论坛版块
+     * @param pageIndex
+     * @param dataSize
+     * @return
+     */
     public List<Forum> findForumByPage(int pageIndex,int dataSize){
         Query forumQuery=Query.query(new Criteria()).skip((pageIndex-1)*dataSize).limit(dataSize);
         List<Forum> forums=mongoTemplate.find(forumQuery,Forum.class,FORUM_COLLECTION);

@@ -21,4 +21,10 @@ public interface ForumService {
      * @return
      */
     public ReturnCommonResult findForumByPage(int pageIndex,int dataSize);
+
+    /**
+     * 查询所有的论坛版块
+     * @return
+     */
+    public ReturnCommonResult findAllForum();
 }
