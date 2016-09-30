@@ -1,6 +1,6 @@
 package colin.app.service.mlife.config;
 
-import colin.app.service.mlife.config.handler.IOConnectionHandler;
+import colin.app.service.mlife.config.handler.ConnectionHandler;
 import colin.app.service.mlife.core.prop.MinaProps;
 import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
 import org.apache.mina.core.service.IoAcceptor;
@@ -28,6 +28,8 @@ public class MinaChatServerConfig {
     private final Logger logger = LoggerFactory.getLogger(MinaChatServerConfig.class);
     @Autowired
     private MinaProps minaProps;
+    @Autowired
+    private ConnectionHandler connectionHandler;
 
     @Bean
     public IoAcceptor initMinaChatServer() throws IOException {
@@ -38,7 +40,7 @@ public class MinaChatServerConfig {
         //此处不处理粘包和粘包的问题,应该自己继承CumulativeProtocolDecoder
         defaultIoFilterChain.addLast("codec", new ProtocolCodecFilter(new TextLineCodecFactory(Charset.forName("UTF-8"))));
         //设定处理器
-        minaChatServer.setHandler(new IOConnectionHandler());
+        minaChatServer.setHandler(connectionHandler);
         //设置session缓冲区大小
         minaChatServer.getSessionConfig().setReadBufferSize(minaProps.getBufferSize());
         //设置session的空闲时间,空闲时间达到设定值session关闭
@@ -50,7 +52,7 @@ public class MinaChatServerConfig {
         minaChatServer.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 10);
         //设定监听的tcp端口号
         minaChatServer.bind(new InetSocketAddress(minaProps.getTcpPort()));
-        logger.info("啟動mina");
+        logger.info("啟動mina成功，监听的TCP端口是" + minaProps.getTcpPort());
         return minaChatServer;
     }
 
