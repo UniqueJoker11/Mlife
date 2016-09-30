@@ -2,12 +2,14 @@ package colin.app.service.mlife.controller;
 
 import colin.app.service.mlife.controller.common.CommonController;
 import colin.app.service.mlife.controller.wrapper.DataTableResultWrapper;
+import colin.app.service.mlife.controller.wrapper.ForumThemeWrapper;
 import colin.app.service.mlife.controller.wrapper.ForumWrapper;
 import colin.app.service.mlife.core.common.ReturnCommonResult;
 import colin.app.service.mlife.core.pojo.CrawlerURL;
 import colin.app.service.mlife.core.pojo.Forum;
 import colin.app.service.mlife.core.utils.LogUtils;
 import colin.app.service.mlife.service.ForumService;
+import colin.app.service.mlife.service.ForumThemeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +28,8 @@ public class ForumModuleController extends CommonController {
     @Autowired
     private ForumService forumService;
 
+    @Autowired
+    private ForumThemeService forumThemeService;
     @Autowired
     private LogUtils logUtils;
 
@@ -82,17 +86,36 @@ public class ForumModuleController extends CommonController {
      */
     @RequestMapping(value = "web_forum_theme", method = RequestMethod.GET)
     public ModelAndView showForumTheme() {
-
         ReturnCommonResult result = forumService.findAllForum();
-        logUtils.info(ForumModuleController.class, "===============" + result.isSuccess() + "===" + result.getData());
         if (result.isSuccess()) {
             return super.returnCommonMv("web_forum_theme", "forumList", result.getData());
         } else {
             return super.returnCommonMv("web_forum_theme");
         }
-
     }
 
+    /**
+     * 添加论坛话题
+     * @param forumThemeWrapper
+     * @return
+     */
+    @RequestMapping(value = "add_forum_theme", method = RequestMethod.POST)
+    @ResponseBody
+    public Object addForumTheme(ForumThemeWrapper forumThemeWrapper) {
+        ReturnCommonResult returnCommonResult = forumThemeService.addForumTheme(forumThemeWrapper);
+        return returnCommonResult;
+    }
+
+    /**
+     * 编辑
+     * @param forumThemeWrapper
+     * @return
+     */
+    @RequestMapping(value = "edit_forum_theme", method = RequestMethod.POST)
+    @ResponseBody
+    public Object editForumTheme(ForumThemeWrapper forumThemeWrapper){
+       return null;
+    }
     /**
      * 获取所有的论坛版块内容
      *
