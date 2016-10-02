@@ -633,3 +633,147 @@
 2016-09-30 15:25:39 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
 2016-09-30 15:25:39 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 8.207 seconds (JVM running for 9.321)
 2016-09-30 15:30:00 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:2, serverValue:2272}] to 121.40.144.146:27017
+2016-10-02 21:10:51 [org.springframework.boot.StartupInfoLogger:48] - Starting BootstrapApplication on jokerdeMacBook-Air.local with PID 3622 (/Users/joker/IdeaProjects/Mlife/target/classes started by joker in /Users/joker/IdeaProjects/Mlife)
+2016-10-02 21:10:51 [org.springframework.boot.SpringApplication:659] - No active profile set, falling back to default profiles: default
+2016-10-02 21:10:51 [org.springframework.context.support.AbstractApplicationContext:581] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c309d4d: startup date [Sun Oct 02 21:10:51 CST 2016]; root of context hierarchy
+2016-10-02 21:10:51 [org.hibernate.validator.internal.util.Version:30] - HV000001: Hibernate Validator 5.2.4.Final
+2016-10-02 21:10:54 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:88] - Tomcat initialized with port(s): 8181 (http)
+2016-10-02 21:10:54 [org.apache.juli.logging.DirectJDKLog:179] - Starting service Tomcat
+2016-10-02 21:10:54 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-10-02 21:10:55 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2016-10-02 21:10:55 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 3783 ms
+2016-10-02 21:10:55 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2016-10-02 21:10:55 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-10-02 21:10:55 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-10-02 21:10:55 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-10-02 21:10:55 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2016-10-02 21:10:55 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Cluster created with settings {hosts=[121.40.144.146:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-10-02 21:10:55 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Adding discovered server 121.40.144.146:27017 to client view of cluster
+2016-10-02 21:10:56 [colin.app.service.mlife.config.MinaChatServerConfig:55] - 啟動mina成功，监听的TCP端口是6222
+2016-10-02 21:10:56 [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:165] - Initializing ExecutorService  'defaultSockJsTaskScheduler'
+2016-10-02 21:10:56 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/ws/chat/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2016-10-02 21:10:57 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c309d4d: startup date [Sun Oct 02 21:10:51 CST 2016]; root of context hierarchy
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/chat],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.ChatModuleController.showChatPage()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showDashboard(javax.servlet.http.HttpSession)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/main],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showIndex() throws java.lang.Exception
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/admin_avatar],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showAvatar()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/admin_profile],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showProfile()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/admin_contacts],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showContacts()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/admin_mailbox],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.showMailbox()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.DashboardModuleController.adminLogout(java.lang.String)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error/ie],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.ExceptionModuleController.showError()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_forum],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.ForumModuleController.showForum()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_forum],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.ForumModuleController.addForum(colin.app.service.mlife.controller.wrapper.ForumWrapper)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_forum],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.ForumModuleController.listAllForum(int,int)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_forum_theme],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.ForumModuleController.showForumTheme()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_forum_theme],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.ForumModuleController.addForumTheme(colin.app.service.mlife.controller.wrapper.ForumThemeWrapper)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/edit_forum_theme],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.ForumModuleController.editForumTheme(colin.app.service.mlife.controller.wrapper.ForumThemeWrapper)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/find_all_forum],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.ForumModuleController.getAllForum()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_forum_topic],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.ForumModuleController.showForumTopic()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/],methods=[GET]}" onto public org.springframework.web.context.request.async.WebAsyncTask<org.springframework.web.servlet.ModelAndView> colin.app.service.mlife.controller.IndexModuleController.showMlifePage()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/weichat],methods=[GET]}" onto public org.springframework.web.context.request.async.WebAsyncTask<java.lang.Object> colin.app.service.mlife.controller.IndexModuleController.weiChatValidate(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[GET]}" onto public java.lang.String colin.app.service.mlife.controller.LoginModuleController.showLogin()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/login],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.LoginModuleController.adminLogin(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/crawler_aticle],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerAticleModuleController.showCrawlerAticlePage()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/crawler_aticle_detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerAticleModuleController.showCrawlerAtcileDetailPage(java.lang.String)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/crawler_aticle_list],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerAticleModuleController.showCrawlerAticleDigestList(int,int)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_crawler],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerController.showWebCrawler()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/list_web_crawler],methods=[POST]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.listCrawlerUrlInfo(int,int)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/add_crawler_url],methods=[PUT],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object colin.app.service.mlife.controller.WebCrawlerController.addCrawlerUrlInfo(colin.app.service.mlife.controller.wrapper.CrawlerUrlWrapper)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/mlife/admin/web_parser],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView colin.app.service.mlife.controller.WebCrawlerParserModuleController.showWebCrawlerParserPage()
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry:543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-02 21:10:57 [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping:354] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-02 21:10:58 [org.springframework.jmx.export.MBeanExporter:431] - Registering beans for JMX exposure on startup
+2016-10-02 21:10:58 [org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup:341] - Starting beans in phase 2147483647
+2016-10-02 21:10:58 [org.apache.juli.logging.DirectJDKLog:179] - Initializing ProtocolHandler ["http-nio-8181"]
+2016-10-02 21:10:58 [org.apache.juli.logging.DirectJDKLog:179] - Starting ProtocolHandler [http-nio-8181]
+2016-10-02 21:10:58 [org.apache.juli.logging.DirectJDKLog:179] - Using a shared selector for servlet write/read
+2016-10-02 21:10:58 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:186] - Tomcat started on port(s): 8181 (http)
+2016-10-02 21:10:58 [org.springframework.boot.StartupInfoLogger:57] - Started BootstrapApplication in 8.268 seconds (JVM running for 10.272)
+2016-10-02 21:10:59 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:1, serverValue:2290}] to 121.40.144.146:27017
+2016-10-02 21:10:59 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=14992268}
+2016-10-02 21:10:59 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Discovered cluster type of STANDALONE
+2016-10-02 21:11:50 [org.apache.mina.filter.logging.LoggingFilter:186] - CREATED
+2016-10-02 21:11:50 [colin.app.service.mlife.config.handler.ConnectionHandler:43] - 用户的Session被创建了其对应的userId是48d75508-4ac8-4615-aa39-76a8d9ff58e4
+2016-10-02 21:11:50 [org.apache.mina.filter.logging.LoggingFilter:186] - OPENED
+2016-10-02 21:11:50 [colin.app.service.mlife.config.handler.ConnectionHandler:65] - 用户的Session被打开了,当前userId是48d75508-4ac8-4615-aa39-76a8d9ff58e4
+2016-10-02 21:12:00 [org.apache.mina.filter.logging.LoggingFilter:186] - IDLE
+2016-10-02 21:12:00 [colin.app.service.mlife.config.handler.ConnectionHandler:97] - 用户的Session处于空闲期,当前userId是48d75508-4ac8-4615-aa39-76a8d9ff58e4,空闲状态是both idle
+2016-10-02 21:12:00 [org.apache.mina.filter.logging.LoggingFilter:186] - CLOSED
+2016-10-02 21:12:00 [colin.app.service.mlife.config.handler.ConnectionHandler:82] - 用户的Session被关闭了,当前userId是48d75508-4ac8-4615-aa39-76a8d9ff58e4===接收到的消息数量是0
+2016-10-02 21:12:17 [org.apache.mina.filter.logging.LoggingFilter:186] - CREATED
+2016-10-02 21:12:17 [colin.app.service.mlife.config.handler.ConnectionHandler:43] - 用户的Session被创建了其对应的userId是c52f666b-4662-4137-8757-958cf8cce6f7
+2016-10-02 21:12:17 [org.apache.mina.filter.logging.LoggingFilter:186] - OPENED
+2016-10-02 21:12:17 [colin.app.service.mlife.config.handler.ConnectionHandler:65] - 用户的Session被打开了,当前userId是c52f666b-4662-4137-8757-958cf8cce6f7
+2016-10-02 21:12:18 [org.apache.mina.filter.logging.LoggingFilter:157] - RECEIVED: HeapBuffer[pos=0 lim=17 cap=1024: 5B 42 40 35 34 65 64 32 31 64 33 0A 71 75 69 74...]
+2016-10-02 21:12:18 [colin.app.service.mlife.config.handler.ConnectionHandler:127] - 服务端收到了消息,当前userId是c52f666b-4662-4137-8757-958cf8cce6f7收到的消息内容是[B@54ed21d3
+2016-10-02 21:12:18 [colin.app.service.mlife.config.handler.ConnectionHandler:127] - 服务端收到了消息,当前userId是c52f666b-4662-4137-8757-958cf8cce6f7收到的消息内容是quit
+2016-10-02 21:12:23 [org.apache.mina.filter.logging.LoggingFilter:157] - SENT: 服务端已收到客户端发送的第1条消息,我是服务端返回的消息2016-10-02 21:12:18
+2016-10-02 21:12:23 [colin.app.service.mlife.config.handler.ConnectionHandler:155] - 服务器返回的消息内容是服务端已收到客户端发送的第1条消息,我是服务端返回的消息2016-10-02 21:12:18
+2016-10-02 21:12:23 [org.apache.mina.filter.logging.LoggingFilter:157] - SENT: 服务端已收到客户端发送的第2条消息,我是服务端返回的消息2016-10-02 21:12:18
+2016-10-02 21:12:23 [colin.app.service.mlife.config.handler.ConnectionHandler:155] - 服务器返回的消息内容是服务端已收到客户端发送的第2条消息,我是服务端返回的消息2016-10-02 21:12:18
+2016-10-02 21:12:23 [org.apache.mina.filter.logging.LoggingFilter:186] - CLOSED
+2016-10-02 21:12:23 [colin.app.service.mlife.config.handler.ConnectionHandler:82] - 用户的Session被关闭了,当前userId是c52f666b-4662-4137-8757-958cf8cce6f7===接收到的消息数量是2
+2016-10-02 21:16:48 [com.mongodb.diagnostics.logging.SLF4JLogger:76] - Exception in monitor thread while connecting to server 121.40.144.146:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:142)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2016-10-02 21:17:09 [com.mongodb.diagnostics.logging.SLF4JLogger:76] - Exception in monitor thread while connecting to server 121.40.144.146:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:480)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:225)
+	at com.mongodb.connection.CommandHelper.receiveReply(CommandHelper.java:134)
+	at com.mongodb.connection.CommandHelper.receiveCommandResult(CommandHelper.java:121)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:32)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:83)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:43)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:85)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:491)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:221)
+	... 8 common frames omitted
+2016-10-02 21:17:20 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:4, serverValue:2291}] to 121.40.144.146:27017
+2016-10-02 21:17:20 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Monitor thread successfully connected to server with description ServerDescription{address=121.40.144.146:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 3]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=42317465}
+2016-10-02 21:20:00 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Opened connection [connectionId{localValue:5, serverValue:2292}] to 121.40.144.146:27017
+2016-10-02 21:20:53 [com.mongodb.diagnostics.logging.SLF4JLogger:76] - Exception in monitor thread while connecting to server 121.40.144.146:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:142)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2016-10-02 21:30:00 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=STANDALONE, connectionMode=MULTIPLE, all=[ServerDescription{address=121.40.144.146:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]}. Waiting for 30000 ms before timing out
+2016-10-02 21:38:15 [org.springframework.context.support.AbstractApplicationContext:982] - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c309d4d: startup date [Sun Oct 02 21:10:51 CST 2016]; root of context hierarchy
+2016-10-02 21:38:15 [org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup:356] - Stopping beans in phase 2147483647
+2016-10-02 21:38:15 [org.springframework.jmx.export.MBeanExporter:449] - Unregistering JMX-exposed beans on shutdown
+2016-10-02 21:38:15 [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:203] - Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2016-10-02 21:38:15 [com.mongodb.diagnostics.logging.SLF4JLogger:71] - Closed connection [connectionId{localValue:5, serverValue:2292}] to 121.40.144.146:27017 because there was a socket exception raised on another connection from this pool.
