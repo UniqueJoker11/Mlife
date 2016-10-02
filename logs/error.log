@@ -1,6 +1,6 @@
-2016-09-21 22:39:14 [org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler:95] - Unexpected error occurred in scheduled task.
-org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiving message; nested exception is com.mongodb.MongoSocketReadException: Exception receiving message
-	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:107)
+2016-09-30 23:50:30 [org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler:95] - Unexpected error occurred in scheduled task.
+org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=STANDALONE, servers=[{address=121.40.144.146:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=STANDALONE, servers=[{address=121.40.144.146:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
 	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2114)
 	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:1957)
 	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:1763)
@@ -14,7 +14,7 @@ org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiv
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
-	at colin.app.service.mlife.core.dao.CrawlerURLDao$$EnhancerBySpringCGLIB$$4b2e5079.findUnCrawlerURL(<generated>)
+	at colin.app.service.mlife.core.dao.CrawlerURLDao$$EnhancerBySpringCGLIB$$9f3b1f75.findUnCrawlerURL(<generated>)
 	at colin.app.service.mlife.schedule.PageCrawlerSchedule.setCrawlerAticleSchedule(PageCrawlerSchedule.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -30,22 +30,13 @@ org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiv
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: com.mongodb.MongoSocketReadException: Exception receiving message
-	at com.mongodb.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:480)
-	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:225)
-	at com.mongodb.connection.UsageTrackingInternalConnection.receiveMessage(UsageTrackingInternalConnection.java:102)
-	at com.mongodb.connection.DefaultConnectionPool$PooledConnection.receiveMessage(DefaultConnectionPool.java:435)
-	at com.mongodb.connection.CommandProtocol.execute(CommandProtocol.java:112)
-	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:159)
-	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:286)
-	at com.mongodb.connection.DefaultServerConnection.command(DefaultServerConnection.java:173)
-	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:215)
-	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:206)
-	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:112)
-	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:487)
-	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:482)
-	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:239)
-	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:212)
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=STANDALONE, servers=[{address=121.40.144.146:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:210)
 	at com.mongodb.operation.FindOperation.execute(FindOperation.java:482)
 	at com.mongodb.operation.FindOperation.execute(FindOperation.java:79)
 	at com.mongodb.Mongo.execute(Mongo.java:772)
@@ -54,12 +45,3 @@ Caused by: com.mongodb.MongoSocketReadException: Exception receiving message
 	at com.mongodb.DBCursor.hasNext(DBCursor.java:152)
 	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:1943)
 	... 27 common frames omitted
-Caused by: java.net.SocketException: Operation timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:170)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at com.mongodb.connection.SocketStream.read(SocketStream.java:85)
-	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:491)
-	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:221)
-	... 47 common frames omitted

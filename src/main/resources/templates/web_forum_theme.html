@@ -60,6 +60,7 @@
                                     </select>
                                 </div>
                         </div>
+                        <div class="hr-line-dashed"></div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">话题名称</label>
 
@@ -78,7 +79,7 @@
                         <div class="hr-line-dashed"></div>
                         <div class="form-group">
                             <button class="btn btn-primary col-sm-offset-5 col-sm-3" type="button"
-                                    onclick="submitForumInfo()">提交
+                                    onclick="submitForumThemeInfo()">提交
                             </button>
                         </div>
                     </form>
@@ -220,6 +221,11 @@
         loadChosenSelectVal();
         function loadChosenSelectVal(){
             $(".chosen-select").chosen();
+        }
+        //提交论坛版块
+        function submitForumThemeInfo(){
+            var params=new Object();
+            $.post("add_forum_theme",params,function(data){});
         }
         /*  oTable = $("#editable").dataTable({
          "autoWidth": true,
