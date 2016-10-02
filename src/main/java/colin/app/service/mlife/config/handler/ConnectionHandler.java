@@ -133,9 +133,7 @@ public class ConnectionHandler implements IoHandler {
         session.write(responseMsg);
         if (msg.trim().equalsIgnoreCase("quit")) {
             System.out.println("接收到了关闭指令,服务端session关闭");
-            if (session.isConnected()) {
-                session.getCloseFuture().awaitUninterruptibly();
-            }
+                session.closeOnFlush();
             return;
         }
 
@@ -152,7 +150,7 @@ public class ConnectionHandler implements IoHandler {
     @Override
     public void messageSent(IoSession session, Object message) throws Exception {
         //String msgContent = new String(((IoBuffer) message).array(), Charset.forName("UTF-8"));
-        logger.info("服务器返回的消息内容是" + message);
+        logger.info("服务器返回的消息内容是:" + message);
     }
 
     /**
