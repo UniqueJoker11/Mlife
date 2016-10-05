@@ -13,7 +13,7 @@
         <version>1.4.0.RELEASE</version>
     </parent>
     <properties>
-        <mina.version>2.0.14</mina.version>
+        <mina.version>2.0.15</mina.version>
     </properties>
     <dependencies>
         <dependency>
@@ -207,11 +207,11 @@
             <artifactId>protobuf-java-util</artifactId>
             <version>3.0.2</version>
         </dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-all</artifactId>
             <version>0.13.2</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <extensions>
@@ -243,7 +243,10 @@
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.5.0</version>
                 <configuration>
-                    <protocExecutable>/Users/joker/Downloads/protoc-3.0.2-osx-x86_64/bin/protoc</protocExecutable>
+                    <!--mac home-->
+                    <!--<protocExecutable>/Users/joker/Downloads/protoc-3.0.2-osx-x86_64/bin/protoc</protocExecutable>-->
+                    <!--win company-->
+                    <protocExecutable>E:/protobuf/protoc-3.1.0/bin/protoc</protocExecutable>
                     <!--
                       The version of protoc must match protobuf-java. If you don't depend on
                       protobuf-java directly, you will be transitively depending on the

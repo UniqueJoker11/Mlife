@@ -51,7 +51,10 @@ public class ChatClient {
                 person.setId(1);
                 person.setName("colin");
                 person.setEmail("9292@qq.com");
-                session.write(person.build().toByteArray());
+                session.write(person.build());
+                person.build();
+
+                session.write(person);
                 System.out.println("给服务器发送消息完毕,开始发送结束指令");
                 session.write("quit");
                 //先关闭session
@@ -66,6 +69,5 @@ public class ChatClient {
 
     public static void main(String[] args) {
         ChatClient chatClient=new ChatClient();
-        chatClient.initMinaClient();
     }
 }

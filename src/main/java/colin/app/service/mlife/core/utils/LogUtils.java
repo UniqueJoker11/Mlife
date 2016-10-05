@@ -12,7 +12,7 @@ import javax.annotation.PostConstruct;
  */
 @Component
 public class LogUtils {
-    private Logger logger=LoggerFactory.getLogger(LogUtils.class);
+    private static Logger logger=LoggerFactory.getLogger(LogUtils.class);
 
   /*  private Class<?> clazz;
 
@@ -25,7 +25,7 @@ public class LogUtils {
      * @param clazz
      * @param msg
      */
-    public void info(Class<?> clazz,String msg){
+    public static void info(Class<?> clazz,String msg){
         logger=LoggerFactory.getLogger(clazz);
         logger.info(msg);
     }
@@ -35,7 +35,7 @@ public class LogUtils {
      * @param clazz
      * @param msg
      */
-    public void warn(Class<?> clazz,String msg){
+    public static void warn(Class<?> clazz,String msg){
         logger=LoggerFactory.getLogger(clazz);
         logger.warn(msg);
     }
@@ -46,7 +46,7 @@ public class LogUtils {
      * @param msg
      * @param e
      */
-    public void error(Class<?> clazz,String msg,Exception e){
+    public static void error(Class<?> clazz,String msg,Exception e){
         logger=LoggerFactory.getLogger(clazz);
         if(ObjectUtils.isEmpty(e)){
             logger.error(msg);

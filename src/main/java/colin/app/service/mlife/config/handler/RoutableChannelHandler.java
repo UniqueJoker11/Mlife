@@ -1,13 +1,9 @@
 package colin.app.service.mlife.config.handler;
 
-import colin.app.service.mlife.config.nio.probuffer.Packet;
-import colin.app.service.mlife.core.pb.UserPB;
-import colin.app.service.mlife.core.pojo.User;
-
 /**
  * Created by Administrator on 2016/9/30.
  */
-public interface RoutableChannelHandler extends ChannelHandler<Packet> {
+public interface RoutableChannelHandler extends ChannelHandler {
 
     /**
      * Returns the XMPP address. The address is used by services like the core
@@ -17,5 +13,5 @@ public interface RoutableChannelHandler extends ChannelHandler<Packet> {
      *
      * @return the XMPP address.
      */
-    public UserPB getAddress();
+    public void getAddress();
 }

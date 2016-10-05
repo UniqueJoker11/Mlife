@@ -22,11 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Mlife" />
+        <module name="MLife" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="Mlife" target="1.6" />
+      <module name="MLife" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

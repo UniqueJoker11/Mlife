@@ -2,6 +2,7 @@ package colin.app.service.mlife.config.handler;
 
 import colin.app.service.mlife.config.handler.impl.ClientStanzaHandler;
 import colin.app.service.mlife.config.nio.connection.impl.NIOConnection;
+import colin.app.service.mlife.core.pb.PersonPB;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.apache.mina.core.future.CloseFuture;
 import org.apache.mina.core.service.IoHandler;
@@ -125,18 +126,22 @@ public class ConnectionHandler implements IoHandler {
     @Override
     public void messageReceived(IoSession session, Object message) throws Exception {
         logger.info("服务端收到了消息,当前userId是" + session.getAttribute("userId") + "收到的消息内容是" + message.toString());
-        String msg = (String) message;
-        msgList.add(msg);
-        StanzaHandler stanzaHandler= (StanzaHandler) session.getAttribute("HANDLER");
-        stanzaHandler.process(message);
-        String responseMsg = "服务端已收到客户端发送的第" + msgList.size() + "条消息,我是服务端返回的消息" + DateFormatUtils.format(Calendar.getInstance(), "yyyy-MM-dd HH:mm:ss");
-        session.write(responseMsg);
-        if (msg.trim().equalsIgnoreCase("quit")) {
-            System.out.println("接收到了关闭指令,服务端session关闭");
+        if(message instanceof String){
+            String msg = (String) message;
+            msgList.add(msg);
+            StanzaHandler stanzaHandler= (StanzaHandler) session.getAttribute("HANDLER");
+            stanzaHandler.process(message);
+            String responseMsg = "服务端已收到客户端发送的第" + msgList.size() + "条消息,我是服务端返回的消息" + DateFormatUtils.format(Calendar.getInstance(), "yyyy-MM-dd HH:mm:ss");
+            session.write(responseMsg);
+            if (msg.trim().equalsIgnoreCase("quit")) {
+                System.out.println("接收到了关闭指令,服务端session关闭");
                 session.closeOnFlush();
-            return;
+                return;
+            }
+        }else if(message instanceof PersonPB.Person){
+            PersonPB.Person person= (PersonPB.Person) message;
+            logger.info("传递的用户姓名是"+person.getName());
         }
-
     }
 
     /**

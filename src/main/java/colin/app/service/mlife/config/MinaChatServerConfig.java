@@ -1,6 +1,8 @@
 package colin.app.service.mlife.config;
 
 import colin.app.service.mlife.config.handler.ConnectionHandler;
+import colin.app.service.mlife.config.protobuf.codec.ProtobufCodexFactory;
+import colin.app.service.mlife.core.pb.PersonPB;
 import colin.app.service.mlife.core.prop.MinaProps;
 import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
 import org.apache.mina.core.service.IoAcceptor;
@@ -32,13 +34,13 @@ public class MinaChatServerConfig {
     private ConnectionHandler connectionHandler;
 
     @Bean
-    public IoAcceptor initMinaChatServer() throws IOException {
+    public IoAcceptor initMinaChatServer() throws IOException, NoSuchMethodException {
         IoAcceptor minaChatServer = new NioSocketAcceptor();
         //配置基础的过滤链
         DefaultIoFilterChainBuilder defaultIoFilterChain = minaChatServer.getFilterChain();
         defaultIoFilterChain.addLast("logger", new LoggingFilter());
         //此处不处理粘包和粘包的问题,应该自己继承CumulativeProtocolDecoder
-        defaultIoFilterChain.addLast("codec", new ProtocolCodecFilter(new TextLineCodecFactory(Charset.forName("UTF-8"))));
+        defaultIoFilterChain.addLast("codec", new ProtocolCodecFilter(new ProtobufCodexFactory(PersonPB.Person.class)));
         //设定处理器
         minaChatServer.setHandler(connectionHandler);
         //设置session缓冲区大小
