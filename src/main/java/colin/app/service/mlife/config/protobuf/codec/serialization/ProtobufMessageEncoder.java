@@ -20,7 +20,9 @@
 package colin.app.service.mlife.config.protobuf.codec.serialization;
 
 
+import colin.app.service.mlife.core.pb.PersonPB;
 import com.google.protobuf.GeneratedMessageV3;
+import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolEncoder;
 import org.apache.mina.filter.codec.ProtocolEncoderOutput;
@@ -55,7 +57,15 @@ public class ProtobufMessageEncoder implements ProtocolEncoder {
     @Override
     public void encode(IoSession session, Object message, ProtocolEncoderOutput out) throws Exception {
         if(null!=message){
-            out.write(message);
+            PersonPB.Person protobufMsg=(PersonPB.Person) message;
+            byte[] bytes = protobufMsg.toByteArray(); // Student对象转为protobuf字节码
+            int length = bytes.length;
+            //int 长度占4个字节
+            IoBuffer buffer = IoBuffer.allocate(length + 4);
+            buffer.putInt(length); // write header 头部设定消息的长度
+            buffer.put(bytes); // write body
+            buffer.flip();
+            out.write(buffer);
         }
     }
 

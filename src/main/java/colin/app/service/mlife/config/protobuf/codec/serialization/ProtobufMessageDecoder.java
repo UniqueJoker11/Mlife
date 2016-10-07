@@ -25,6 +25,7 @@ import com.google.protobuf.ExtensionRegistryLite;
 import com.google.protobuf.GeneratedMessageV3;
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
+import org.apache.mina.filter.codec.CumulativeProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 
@@ -34,7 +35,7 @@ import java.lang.reflect.Method;
 /**
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */
-public final class ProtobufMessageDecoder<IN extends GeneratedMessageV3> implements ProtocolDecoder {
+public final class ProtobufMessageDecoder<IN extends GeneratedMessageV3> extends CumulativeProtocolDecoder {
 
     private final Class <? extends GeneratedMessageV3> protobufClazz;
 
@@ -60,53 +61,39 @@ public final class ProtobufMessageDecoder<IN extends GeneratedMessageV3> impleme
     }
 
     /**
-     * Decodes binary or protocol-specific content into higher-level message objects.
-     * MINA invokes {@link #decode(org.apache.mina.core.session.IoSession, org.apache.mina.core.buffer.IoBuffer, org.apache.mina.filter.codec.ProtocolDecoderOutput)}
-     * method with read data, and then the decoder implementation puts decoded
-     * messages into {@link org.apache.mina.filter.codec.ProtocolDecoderOutput}.
+     * Implement this method to consume the specified cumulative buffer and
+     * decode its content into message(s).
      *
      * @param session The current Session
-     * @param in      the buffer to decode
+     * @param in      the cumulative buffer
      * @param out     The {@link org.apache.mina.filter.codec.ProtocolDecoderOutput} that will receive the decoded message
-     * @throws Exception if the read data violated protocol specification
+     * @return <tt>true</tt> if and only if there's more to decode in the buffer
+     * and you want to have <tt>doDecode</tt> method invoked again.
+     * Return <tt>false</tt> if remaining data is not enough to decode,
+     * then this method will be invoked again when more data is
+     * cumulated.
+     * @throws Exception if cannot decode <tt>in</tt>.
      */
     @Override
-    public void decode(IoSession session, IoBuffer in, ProtocolDecoderOutput out) throws Exception {
-        String protobufName=protobufClazz.getName();
-        LogUtils.info(ProtobufMessageDecoder.class,"消息协议名称是"+protobufName);
-        if(protobufName.contains("PersonPB$Person")){
-            PersonPB.Person person= PersonPB.Person.parseFrom(in.asInputStream());
-            out.write(person);
+    protected boolean doDecode(IoSession session, IoBuffer in, ProtocolDecoderOutput out) throws Exception {
+        if(null==in||in.remaining()<4){
+           return false;
         }else{
-            LogUtils.warn(ProtobufMessageDecoder.class,"无法处理的消息类型");
-            out.write(in);
+            // 标记开始位置，如果一条消息没传输完成则返回到这个位置
+            in.mark();
+            // 读取header部分，获取body长度
+            int msgLength=in.getInt();
+            // 如果body没有接收完整，直接返回false
+            if(in.remaining()<msgLength){
+                return false;
+            }else{
+                byte[] msgBytes=new byte[msgLength];
+                in.get(msgBytes);
+                PersonPB.Person person=PersonPB.Person.parseFrom(msgBytes);
+                session.write(person);
+                return true;
+            }
         }
     }
 
-    /**
-     * Invoked when the specified <tt>session</tt> is closed.  This method is useful
-     * when you deal with the protocol which doesn't specify the length of a message
-     * such as HTTP response without <tt>content-length</tt> header. Implement this
-     * method to process the remaining data that {@link #decode(org.apache.mina.core.session.IoSession, org.apache.mina.core.buffer.IoBuffer, org.apache.mina.filter.codec.ProtocolDecoderOutput)}
-     * method didn't process completely.
-     *
-     * @param session The current Session
-     * @param out     The {@link org.apache.mina.filter.codec.ProtocolDecoderOutput} that contains the decoded message
-     * @throws Exception if the read data violated protocol specification
-     */
-    @Override
-    public void finishDecode(IoSession session, ProtocolDecoderOutput out) throws Exception {
-          LogUtils.info(ProtobufMessageDecoder.class,"结束解码！");
-    }
-
-    /**
-     * Releases all resources related with this decoder.
-     *
-     * @param session The current Session
-     * @throws Exception if failed to dispose all resources
-     */
-    @Override
-    public void dispose(IoSession session) throws Exception {
-         LogUtils.info(ProtobufMessageDecoder.class,"释放解密资源");
-    }
 }

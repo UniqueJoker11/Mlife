@@ -63,9 +63,16 @@
                         <div class="hr-line-dashed"></div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">话题名称</label>
-
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="add_name" name="name">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">话题作者</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="add_author" name="digest_author">
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
@@ -76,6 +83,7 @@
                                 <textarea class="form-control" id="add_digest" name="digest"></textarea>
                             </div>
                         </div>
+
                         <div class="hr-line-dashed"></div>
                         <div class="form-group">
                             <button class="btn btn-primary col-sm-offset-5 col-sm-3" type="button"
@@ -222,11 +230,6 @@
         function loadChosenSelectVal(){
             $(".chosen-select").chosen();
         }
-        //提交论坛版块
-        function submitForumThemeInfo(){
-            var params=new Object();
-            $.post("add_forum_theme",params,function(data){});
-        }
         /*  oTable = $("#editable").dataTable({
          "autoWidth": true,
          language: {
@@ -263,6 +266,20 @@
          ]
          });*/
     });
+    //提交论坛版块
+    function submitForumThemeInfo(){
+        var params=new Object();
+        params.forumId=$("#forumTopicSelect").val();
+        params.themeAuthor=$("#add_name").val();
+        params.themeTitle=$("#add_author").val();
+        params.themeDescribe=$("#add_digest").val();
+        //传递论坛主题内容
+        $.post("add_forum_theme",params,function(data){
+            if(data.success){
+                swal("添加论坛主题提示", "添加主题成功", "确定");
+            }
+        });
+    }
     var dataTableUtils = function () {
         this.combineDataTable = function (data) {
             var result = new Array();

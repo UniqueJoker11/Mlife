@@ -1,6 +1,9 @@
 package colin.app.service.mlife.test.client.handler;
 
 import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.mina.core.future.CloseFuture;
+import org.apache.mina.core.future.IoFuture;
+import org.apache.mina.core.future.IoFutureListener;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
@@ -45,8 +48,17 @@ public class MinaClientHandler extends IoHandlerAdapter{
 	     */  
 	    @Override
 	    public void sessionClosed(IoSession session) throws Exception {
-	        System.out.println("sessionClosed关闭客户端!");
-			session.closeOnFlush();
+			if (session.isActive()){
+				CloseFuture closeFuture=session.closeOnFlush();
+				closeFuture.addListener(new IoFutureListener<IoFuture>() {
+					@Override
+					public void operationComplete(IoFuture future) {
+						System.out.println(future.getSession().isWriterIdle()+"==="+future.getSession().isReaderIdle());
+					}
+				});
+				closeFuture.awaitUninterruptibly(100);
+			}
+			System.out.println("sessionClosed关闭客户端!");
 	    }
 	  
 	    @Override
